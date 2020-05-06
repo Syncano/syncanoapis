@@ -1,0 +1,26 @@
+syntax = "proto3";
+package syncano.codebox.lb.v1;
+option go_package = "github.com/Syncano/syncanoapis/gen/go/syncano/codebox/lb/v1;lb";
+
+import "syncano/codebox/script/v1/script.proto";
+
+service ScriptRunner {
+  // Run runs script in secure environment of worker.
+  rpc Run (stream RunRequest) returns (stream script.v1.RunResponse);
+}
+
+// RunRequest represents either a Meta message or a Chunk message.
+// It should always consist of exactly 1 Meta and optionally repeated Chunk messages.
+message RunRequest {
+  // Meta message specifies fields to describe what is being run.
+  message MetaMessage {
+    string request_id = 3; // Unique request ID.
+    string concurrency_key = 1; // Key on which concurrency limiting will take place.
+    int32 concurrency_limit = 2; // Max concurrency allowed for key.
+  }
+
+  oneof value {
+    MetaMessage meta = 1;
+    script.v1.RunRequest request = 2;
+  }
+}

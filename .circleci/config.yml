@@ -1,0 +1,67 @@
+version: 2.1
+
+commands:
+  protoc_install:
+    steps:
+      - run:
+          name: Install protoc
+          command: |
+            PB_REL="https://github.com/protocolbuffers/protobuf/releases"
+            curl -LO $PB_REL/download/v3.11.4/protoc-3.11.4-linux-x86_64.zip
+            unzip protoc-3.11.4-linux-x86_64.zip -d $HOME/.local
+  verify_clean:
+    steps:
+      - run:
+          name: Verify if all files are clean
+          command: |
+            git diff --exit-code
+
+
+jobs:
+  python-gen:
+    docker:
+      - image: python:3.7-slim
+    steps:
+      - checkout
+
+      - protoc_install
+      - run:
+          name: Generate contract from proto
+          command: |
+            pip3 install grpcio-tools
+
+            make proto-python
+      - verify_clean
+
+  go-gen:
+    docker:
+      - image: golang:1.14-slim
+    steps:
+      - checkout
+
+      - protoc_install
+      - run:
+          name: Generate contract from proto
+          command: |
+            go get github.com/golang/protobuf/protoc-gen-go
+
+            make proto-go
+      - verify_clean
+
+  buf-lint:
+    docker:
+      - image: bufbuild/buf:0.11.0
+    steps:
+      - checkout
+
+      - run:
+          name: Buf lint
+          command: |
+            buf check lint
+
+workflows:
+  test:
+    jobs:
+      - python-gen
+      - go-gen
+      - buf-lint

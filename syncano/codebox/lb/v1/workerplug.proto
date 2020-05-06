@@ -1,0 +1,47 @@
+syntax = "proto3";
+package syncano.codebox.lb.v1;
+option go_package = "github.com/Syncano/syncanoapis/gen/go/syncano/codebox/lb/v1;lb";
+
+service WorkerPlug {
+  // ContainerRemoved handles notifications sent by client whenever a container gets removed from cache.
+  rpc ContainerRemoved (ContainerRemovedRequest) returns (ContainerRemovedResponse);
+
+  // Register is sent at the beginning by the worker.
+  rpc Register (RegisterRequest) returns (RegisterResponse);
+
+  // Heartbeat is meant to be called periodically by worker. If it's not sent for some time, worker will be removed.
+  rpc Heartbeat (HeartbeatRequest) returns (HeartbeatResponse);
+
+  // Disconnect gracefully removes worker.
+  rpc Disconnect (DisconnectRequest) returns (DisconnectResponse);
+}
+
+message ContainerRemovedRequest {
+  string id = 1;
+  string container_id = 2;
+  string source_hash = 3;
+  string environment = 4;
+  string user_id = 5;
+}
+message ContainerRemovedResponse {}
+
+message RegisterRequest {
+  string id = 1;
+  uint32 port = 2;
+  uint32 mcpu = 3;
+  uint64 memory = 4;
+  uint32 default_mcpu = 5;
+}
+message RegisterResponse {}
+
+message HeartbeatRequest {
+  string id = 1;
+  uint64 memory = 2;
+}
+message HeartbeatResponse {
+}
+
+message DisconnectRequest {
+  string id = 1;
+}
+message DisconnectResponse {}
