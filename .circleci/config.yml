@@ -2,13 +2,17 @@ version: 2.1
 
 commands:
   protoc_install:
+    parameters:
+      version:
+        type: string
+        default: "3.11.4"
     steps:
       - run:
           name: Install protoc
           command: |
             PB_REL="https://github.com/protocolbuffers/protobuf/releases"
-            curl -LO $PB_REL/download/v3.11.4/protoc-3.11.4-linux-x86_64.zip
-            unzip protoc-3.11.4-linux-x86_64.zip -d $HOME/.local
+            curl -LO $PB_REL/download/v<< parameters.version >>/protoc-<< parameters.version >>-linux-x86_64.zip
+            unzip protoc-<< parameters.version >>-linux-x86_64.zip -d $HOME/.local
   verify_clean:
     steps:
       - run:
@@ -20,7 +24,7 @@ commands:
 jobs:
   python-gen:
     docker:
-      - image: python:3.7-slim
+      - image: circleci/python:3.7
     steps:
       - checkout
 
@@ -35,7 +39,7 @@ jobs:
 
   go-gen:
     docker:
-      - image: golang:1.14-slim
+      - image: circleci/golang:1.14
     steps:
       - checkout
 
