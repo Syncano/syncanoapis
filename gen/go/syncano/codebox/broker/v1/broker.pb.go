@@ -141,6 +141,69 @@ func (*RunRequest_ScriptMeta) isRunRequest_Value() {}
 
 func (*RunRequest_ScriptChunk) isRunRequest_Value() {}
 
+type SimpleRunRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Meta       *RunRequest_Meta     `protobuf:"bytes,1,opt,name=meta,proto3" json:"meta,omitempty"`
+	LbMeta     *v1.RunRequest_Meta  `protobuf:"bytes,2,opt,name=lb_meta,json=lbMeta,proto3" json:"lb_meta,omitempty"`
+	ScriptMeta *v11.RunRequest_Meta `protobuf:"bytes,3,opt,name=script_meta,json=scriptMeta,proto3" json:"script_meta,omitempty"`
+}
+
+func (x *SimpleRunRequest) Reset() {
+	*x = SimpleRunRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_syncano_codebox_broker_v1_broker_proto_msgTypes[1]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *SimpleRunRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SimpleRunRequest) ProtoMessage() {}
+
+func (x *SimpleRunRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_syncano_codebox_broker_v1_broker_proto_msgTypes[1]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use SimpleRunRequest.ProtoReflect.Descriptor instead.
+func (*SimpleRunRequest) Descriptor() ([]byte, []int) {
+	return file_syncano_codebox_broker_v1_broker_proto_rawDescGZIP(), []int{1}
+}
+
+func (x *SimpleRunRequest) GetMeta() *RunRequest_Meta {
+	if x != nil {
+		return x.Meta
+	}
+	return nil
+}
+
+func (x *SimpleRunRequest) GetLbMeta() *v1.RunRequest_Meta {
+	if x != nil {
+		return x.LbMeta
+	}
+	return nil
+}
+
+func (x *SimpleRunRequest) GetScriptMeta() *v11.RunRequest_Meta {
+	if x != nil {
+		return x.ScriptMeta
+	}
+	return nil
+}
+
 // Meta message specifies fields to describe what is being run.
 type RunRequest_Meta struct {
 	state         protoimpl.MessageState
@@ -157,7 +220,7 @@ type RunRequest_Meta struct {
 func (x *RunRequest_Meta) Reset() {
 	*x = RunRequest_Meta{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_syncano_codebox_broker_v1_broker_proto_msgTypes[1]
+		mi := &file_syncano_codebox_broker_v1_broker_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -170,7 +233,7 @@ func (x *RunRequest_Meta) String() string {
 func (*RunRequest_Meta) ProtoMessage() {}
 
 func (x *RunRequest_Meta) ProtoReflect() protoreflect.Message {
-	mi := &file_syncano_codebox_broker_v1_broker_proto_msgTypes[1]
+	mi := &file_syncano_codebox_broker_v1_broker_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -268,19 +331,39 @@ var file_syncano_codebox_broker_v1_broker_proto_rawDesc = []byte{
 	0x73, 0x45, 0x6e, 0x74, 0x72, 0x79, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18, 0x01, 0x20,
 	0x01, 0x28, 0x09, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75,
 	0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x3a, 0x02,
-	0x38, 0x01, 0x42, 0x07, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x32, 0x68, 0x0a, 0x0c, 0x53,
-	0x63, 0x72, 0x69, 0x70, 0x74, 0x52, 0x75, 0x6e, 0x6e, 0x65, 0x72, 0x12, 0x58, 0x0a, 0x03, 0x52,
-	0x75, 0x6e, 0x12, 0x25, 0x2e, 0x73, 0x79, 0x6e, 0x63, 0x61, 0x6e, 0x6f, 0x2e, 0x63, 0x6f, 0x64,
-	0x65, 0x62, 0x6f, 0x78, 0x2e, 0x62, 0x72, 0x6f, 0x6b, 0x65, 0x72, 0x2e, 0x76, 0x31, 0x2e, 0x52,
-	0x75, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x26, 0x2e, 0x73, 0x79, 0x6e, 0x63,
-	0x61, 0x6e, 0x6f, 0x2e, 0x63, 0x6f, 0x64, 0x65, 0x62, 0x6f, 0x78, 0x2e, 0x73, 0x63, 0x72, 0x69,
-	0x70, 0x74, 0x2e, 0x76, 0x31, 0x2e, 0x52, 0x75, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
-	0x65, 0x28, 0x01, 0x30, 0x01, 0x42, 0x48, 0x5a, 0x46, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e,
-	0x63, 0x6f, 0x6d, 0x2f, 0x53, 0x79, 0x6e, 0x63, 0x61, 0x6e, 0x6f, 0x2f, 0x73, 0x79, 0x6e, 0x63,
-	0x61, 0x6e, 0x6f, 0x61, 0x70, 0x69, 0x73, 0x2f, 0x67, 0x65, 0x6e, 0x2f, 0x67, 0x6f, 0x2f, 0x73,
-	0x79, 0x6e, 0x63, 0x61, 0x6e, 0x6f, 0x2f, 0x63, 0x6f, 0x64, 0x65, 0x62, 0x6f, 0x78, 0x2f, 0x62,
-	0x72, 0x6f, 0x6b, 0x65, 0x72, 0x2f, 0x76, 0x31, 0x3b, 0x62, 0x72, 0x6f, 0x6b, 0x65, 0x72, 0x62,
-	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x38, 0x01, 0x42, 0x07, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0xe0, 0x01, 0x0a, 0x10,
+	0x53, 0x69, 0x6d, 0x70, 0x6c, 0x65, 0x52, 0x75, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
+	0x12, 0x3e, 0x0a, 0x04, 0x6d, 0x65, 0x74, 0x61, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x2a,
+	0x2e, 0x73, 0x79, 0x6e, 0x63, 0x61, 0x6e, 0x6f, 0x2e, 0x63, 0x6f, 0x64, 0x65, 0x62, 0x6f, 0x78,
+	0x2e, 0x62, 0x72, 0x6f, 0x6b, 0x65, 0x72, 0x2e, 0x76, 0x31, 0x2e, 0x52, 0x75, 0x6e, 0x52, 0x65,
+	0x71, 0x75, 0x65, 0x73, 0x74, 0x2e, 0x4d, 0x65, 0x74, 0x61, 0x52, 0x04, 0x6d, 0x65, 0x74, 0x61,
+	0x12, 0x3f, 0x0a, 0x07, 0x6c, 0x62, 0x5f, 0x6d, 0x65, 0x74, 0x61, 0x18, 0x02, 0x20, 0x01, 0x28,
+	0x0b, 0x32, 0x26, 0x2e, 0x73, 0x79, 0x6e, 0x63, 0x61, 0x6e, 0x6f, 0x2e, 0x63, 0x6f, 0x64, 0x65,
+	0x62, 0x6f, 0x78, 0x2e, 0x6c, 0x62, 0x2e, 0x76, 0x31, 0x2e, 0x52, 0x75, 0x6e, 0x52, 0x65, 0x71,
+	0x75, 0x65, 0x73, 0x74, 0x2e, 0x4d, 0x65, 0x74, 0x61, 0x52, 0x06, 0x6c, 0x62, 0x4d, 0x65, 0x74,
+	0x61, 0x12, 0x4b, 0x0a, 0x0b, 0x73, 0x63, 0x72, 0x69, 0x70, 0x74, 0x5f, 0x6d, 0x65, 0x74, 0x61,
+	0x18, 0x03, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x2a, 0x2e, 0x73, 0x79, 0x6e, 0x63, 0x61, 0x6e, 0x6f,
+	0x2e, 0x63, 0x6f, 0x64, 0x65, 0x62, 0x6f, 0x78, 0x2e, 0x73, 0x63, 0x72, 0x69, 0x70, 0x74, 0x2e,
+	0x76, 0x31, 0x2e, 0x52, 0x75, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x2e, 0x4d, 0x65,
+	0x74, 0x61, 0x52, 0x0a, 0x73, 0x63, 0x72, 0x69, 0x70, 0x74, 0x4d, 0x65, 0x74, 0x61, 0x32, 0xcc,
+	0x01, 0x0a, 0x0c, 0x53, 0x63, 0x72, 0x69, 0x70, 0x74, 0x52, 0x75, 0x6e, 0x6e, 0x65, 0x72, 0x12,
+	0x58, 0x0a, 0x03, 0x52, 0x75, 0x6e, 0x12, 0x25, 0x2e, 0x73, 0x79, 0x6e, 0x63, 0x61, 0x6e, 0x6f,
+	0x2e, 0x63, 0x6f, 0x64, 0x65, 0x62, 0x6f, 0x78, 0x2e, 0x62, 0x72, 0x6f, 0x6b, 0x65, 0x72, 0x2e,
+	0x76, 0x31, 0x2e, 0x52, 0x75, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x26, 0x2e,
+	0x73, 0x79, 0x6e, 0x63, 0x61, 0x6e, 0x6f, 0x2e, 0x63, 0x6f, 0x64, 0x65, 0x62, 0x6f, 0x78, 0x2e,
+	0x73, 0x63, 0x72, 0x69, 0x70, 0x74, 0x2e, 0x76, 0x31, 0x2e, 0x52, 0x75, 0x6e, 0x52, 0x65, 0x73,
+	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x28, 0x01, 0x30, 0x01, 0x12, 0x62, 0x0a, 0x09, 0x53, 0x69, 0x6d,
+	0x70, 0x6c, 0x65, 0x52, 0x75, 0x6e, 0x12, 0x2b, 0x2e, 0x73, 0x79, 0x6e, 0x63, 0x61, 0x6e, 0x6f,
+	0x2e, 0x63, 0x6f, 0x64, 0x65, 0x62, 0x6f, 0x78, 0x2e, 0x62, 0x72, 0x6f, 0x6b, 0x65, 0x72, 0x2e,
+	0x76, 0x31, 0x2e, 0x53, 0x69, 0x6d, 0x70, 0x6c, 0x65, 0x52, 0x75, 0x6e, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x1a, 0x26, 0x2e, 0x73, 0x79, 0x6e, 0x63, 0x61, 0x6e, 0x6f, 0x2e, 0x63, 0x6f,
+	0x64, 0x65, 0x62, 0x6f, 0x78, 0x2e, 0x73, 0x63, 0x72, 0x69, 0x70, 0x74, 0x2e, 0x76, 0x31, 0x2e,
+	0x52, 0x75, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x30, 0x01, 0x42, 0x48, 0x5a,
+	0x46, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x53, 0x79, 0x6e, 0x63,
+	0x61, 0x6e, 0x6f, 0x2f, 0x73, 0x79, 0x6e, 0x63, 0x61, 0x6e, 0x6f, 0x61, 0x70, 0x69, 0x73, 0x2f,
+	0x67, 0x65, 0x6e, 0x2f, 0x67, 0x6f, 0x2f, 0x73, 0x79, 0x6e, 0x63, 0x61, 0x6e, 0x6f, 0x2f, 0x63,
+	0x6f, 0x64, 0x65, 0x62, 0x6f, 0x78, 0x2f, 0x62, 0x72, 0x6f, 0x6b, 0x65, 0x72, 0x2f, 0x76, 0x31,
+	0x3b, 0x62, 0x72, 0x6f, 0x6b, 0x65, 0x72, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -295,29 +378,35 @@ func file_syncano_codebox_broker_v1_broker_proto_rawDescGZIP() []byte {
 	return file_syncano_codebox_broker_v1_broker_proto_rawDescData
 }
 
-var file_syncano_codebox_broker_v1_broker_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
+var file_syncano_codebox_broker_v1_broker_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_syncano_codebox_broker_v1_broker_proto_goTypes = []interface{}{
 	(*RunRequest)(nil),           // 0: syncano.codebox.broker.v1.RunRequest
-	(*RunRequest_Meta)(nil),      // 1: syncano.codebox.broker.v1.RunRequest.Meta
-	nil,                          // 2: syncano.codebox.broker.v1.RunRequest.Meta.FilesEntry
-	(*v1.RunRequest_Meta)(nil),   // 3: syncano.codebox.lb.v1.RunRequest.Meta
-	(*v11.RunRequest_Meta)(nil),  // 4: syncano.codebox.script.v1.RunRequest.Meta
-	(*v11.RunRequest_Chunk)(nil), // 5: syncano.codebox.script.v1.RunRequest.Chunk
-	(*v11.RunResponse)(nil),      // 6: syncano.codebox.script.v1.RunResponse
+	(*SimpleRunRequest)(nil),     // 1: syncano.codebox.broker.v1.SimpleRunRequest
+	(*RunRequest_Meta)(nil),      // 2: syncano.codebox.broker.v1.RunRequest.Meta
+	nil,                          // 3: syncano.codebox.broker.v1.RunRequest.Meta.FilesEntry
+	(*v1.RunRequest_Meta)(nil),   // 4: syncano.codebox.lb.v1.RunRequest.Meta
+	(*v11.RunRequest_Meta)(nil),  // 5: syncano.codebox.script.v1.RunRequest.Meta
+	(*v11.RunRequest_Chunk)(nil), // 6: syncano.codebox.script.v1.RunRequest.Chunk
+	(*v11.RunResponse)(nil),      // 7: syncano.codebox.script.v1.RunResponse
 }
 var file_syncano_codebox_broker_v1_broker_proto_depIdxs = []int32{
-	1, // 0: syncano.codebox.broker.v1.RunRequest.meta:type_name -> syncano.codebox.broker.v1.RunRequest.Meta
-	3, // 1: syncano.codebox.broker.v1.RunRequest.lb_meta:type_name -> syncano.codebox.lb.v1.RunRequest.Meta
-	4, // 2: syncano.codebox.broker.v1.RunRequest.script_meta:type_name -> syncano.codebox.script.v1.RunRequest.Meta
-	5, // 3: syncano.codebox.broker.v1.RunRequest.script_chunk:type_name -> syncano.codebox.script.v1.RunRequest.Chunk
-	2, // 4: syncano.codebox.broker.v1.RunRequest.Meta.files:type_name -> syncano.codebox.broker.v1.RunRequest.Meta.FilesEntry
-	0, // 5: syncano.codebox.broker.v1.ScriptRunner.Run:input_type -> syncano.codebox.broker.v1.RunRequest
-	6, // 6: syncano.codebox.broker.v1.ScriptRunner.Run:output_type -> syncano.codebox.script.v1.RunResponse
-	6, // [6:7] is the sub-list for method output_type
-	5, // [5:6] is the sub-list for method input_type
-	5, // [5:5] is the sub-list for extension type_name
-	5, // [5:5] is the sub-list for extension extendee
-	0, // [0:5] is the sub-list for field type_name
+	2,  // 0: syncano.codebox.broker.v1.RunRequest.meta:type_name -> syncano.codebox.broker.v1.RunRequest.Meta
+	4,  // 1: syncano.codebox.broker.v1.RunRequest.lb_meta:type_name -> syncano.codebox.lb.v1.RunRequest.Meta
+	5,  // 2: syncano.codebox.broker.v1.RunRequest.script_meta:type_name -> syncano.codebox.script.v1.RunRequest.Meta
+	6,  // 3: syncano.codebox.broker.v1.RunRequest.script_chunk:type_name -> syncano.codebox.script.v1.RunRequest.Chunk
+	2,  // 4: syncano.codebox.broker.v1.SimpleRunRequest.meta:type_name -> syncano.codebox.broker.v1.RunRequest.Meta
+	4,  // 5: syncano.codebox.broker.v1.SimpleRunRequest.lb_meta:type_name -> syncano.codebox.lb.v1.RunRequest.Meta
+	5,  // 6: syncano.codebox.broker.v1.SimpleRunRequest.script_meta:type_name -> syncano.codebox.script.v1.RunRequest.Meta
+	3,  // 7: syncano.codebox.broker.v1.RunRequest.Meta.files:type_name -> syncano.codebox.broker.v1.RunRequest.Meta.FilesEntry
+	0,  // 8: syncano.codebox.broker.v1.ScriptRunner.Run:input_type -> syncano.codebox.broker.v1.RunRequest
+	1,  // 9: syncano.codebox.broker.v1.ScriptRunner.SimpleRun:input_type -> syncano.codebox.broker.v1.SimpleRunRequest
+	7,  // 10: syncano.codebox.broker.v1.ScriptRunner.Run:output_type -> syncano.codebox.script.v1.RunResponse
+	7,  // 11: syncano.codebox.broker.v1.ScriptRunner.SimpleRun:output_type -> syncano.codebox.script.v1.RunResponse
+	10, // [10:12] is the sub-list for method output_type
+	8,  // [8:10] is the sub-list for method input_type
+	8,  // [8:8] is the sub-list for extension type_name
+	8,  // [8:8] is the sub-list for extension extendee
+	0,  // [0:8] is the sub-list for field type_name
 }
 
 func init() { file_syncano_codebox_broker_v1_broker_proto_init() }
@@ -339,6 +428,18 @@ func file_syncano_codebox_broker_v1_broker_proto_init() {
 			}
 		}
 		file_syncano_codebox_broker_v1_broker_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*SimpleRunRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_syncano_codebox_broker_v1_broker_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RunRequest_Meta); i {
 			case 0:
 				return &v.state
@@ -363,7 +464,7 @@ func file_syncano_codebox_broker_v1_broker_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_syncano_codebox_broker_v1_broker_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   3,
+			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
@@ -391,6 +492,9 @@ const _ = grpc.SupportPackageIsVersion6
 type ScriptRunnerClient interface {
 	// Run runs script in secure environment.
 	Run(ctx context.Context, opts ...grpc.CallOption) (ScriptRunner_RunClient, error)
+	// SimpleRun is a simpler alternative to Run that does not require streaming request.
+	// As such, it is only usable for small payloads and does not support chunks.
+	SimpleRun(ctx context.Context, in *SimpleRunRequest, opts ...grpc.CallOption) (ScriptRunner_SimpleRunClient, error)
 }
 
 type scriptRunnerClient struct {
@@ -432,10 +536,45 @@ func (x *scriptRunnerRunClient) Recv() (*v11.RunResponse, error) {
 	return m, nil
 }
 
+func (c *scriptRunnerClient) SimpleRun(ctx context.Context, in *SimpleRunRequest, opts ...grpc.CallOption) (ScriptRunner_SimpleRunClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_ScriptRunner_serviceDesc.Streams[1], "/syncano.codebox.broker.v1.ScriptRunner/SimpleRun", opts...)
+	if err != nil {
+		return nil, err
+	}
+	x := &scriptRunnerSimpleRunClient{stream}
+	if err := x.ClientStream.SendMsg(in); err != nil {
+		return nil, err
+	}
+	if err := x.ClientStream.CloseSend(); err != nil {
+		return nil, err
+	}
+	return x, nil
+}
+
+type ScriptRunner_SimpleRunClient interface {
+	Recv() (*v11.RunResponse, error)
+	grpc.ClientStream
+}
+
+type scriptRunnerSimpleRunClient struct {
+	grpc.ClientStream
+}
+
+func (x *scriptRunnerSimpleRunClient) Recv() (*v11.RunResponse, error) {
+	m := new(v11.RunResponse)
+	if err := x.ClientStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
+
 // ScriptRunnerServer is the server API for ScriptRunner service.
 type ScriptRunnerServer interface {
 	// Run runs script in secure environment.
 	Run(ScriptRunner_RunServer) error
+	// SimpleRun is a simpler alternative to Run that does not require streaming request.
+	// As such, it is only usable for small payloads and does not support chunks.
+	SimpleRun(*SimpleRunRequest, ScriptRunner_SimpleRunServer) error
 }
 
 // UnimplementedScriptRunnerServer can be embedded to have forward compatible implementations.
@@ -444,6 +583,9 @@ type UnimplementedScriptRunnerServer struct {
 
 func (*UnimplementedScriptRunnerServer) Run(ScriptRunner_RunServer) error {
 	return status.Errorf(codes.Unimplemented, "method Run not implemented")
+}
+func (*UnimplementedScriptRunnerServer) SimpleRun(*SimpleRunRequest, ScriptRunner_SimpleRunServer) error {
+	return status.Errorf(codes.Unimplemented, "method SimpleRun not implemented")
 }
 
 func RegisterScriptRunnerServer(s *grpc.Server, srv ScriptRunnerServer) {
@@ -476,6 +618,27 @@ func (x *scriptRunnerRunServer) Recv() (*RunRequest, error) {
 	return m, nil
 }
 
+func _ScriptRunner_SimpleRun_Handler(srv interface{}, stream grpc.ServerStream) error {
+	m := new(SimpleRunRequest)
+	if err := stream.RecvMsg(m); err != nil {
+		return err
+	}
+	return srv.(ScriptRunnerServer).SimpleRun(m, &scriptRunnerSimpleRunServer{stream})
+}
+
+type ScriptRunner_SimpleRunServer interface {
+	Send(*v11.RunResponse) error
+	grpc.ServerStream
+}
+
+type scriptRunnerSimpleRunServer struct {
+	grpc.ServerStream
+}
+
+func (x *scriptRunnerSimpleRunServer) Send(m *v11.RunResponse) error {
+	return x.ServerStream.SendMsg(m)
+}
+
 var _ScriptRunner_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "syncano.codebox.broker.v1.ScriptRunner",
 	HandlerType: (*ScriptRunnerServer)(nil),
@@ -486,6 +649,11 @@ var _ScriptRunner_serviceDesc = grpc.ServiceDesc{
 			Handler:       _ScriptRunner_Run_Handler,
 			ServerStreams: true,
 			ClientStreams: true,
+		},
+		{
+			StreamName:    "SimpleRun",
+			Handler:       _ScriptRunner_SimpleRun_Handler,
+			ServerStreams: true,
 		},
 	},
 	Metadata: "syncano/codebox/broker/v1/broker.proto",

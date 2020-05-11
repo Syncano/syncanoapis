@@ -19,6 +19,11 @@ class ScriptRunnerStub(object):
                 request_serializer=syncano_dot_codebox_dot_broker_dot_v1_dot_broker__pb2.RunRequest.SerializeToString,
                 response_deserializer=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.RunResponse.FromString,
                 )
+        self.SimpleRun = channel.unary_stream(
+                '/syncano.codebox.broker.v1.ScriptRunner/SimpleRun',
+                request_serializer=syncano_dot_codebox_dot_broker_dot_v1_dot_broker__pb2.SimpleRunRequest.SerializeToString,
+                response_deserializer=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.RunResponse.FromString,
+                )
 
 
 class ScriptRunnerServicer(object):
@@ -31,12 +36,25 @@ class ScriptRunnerServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def SimpleRun(self, request, context):
+        """SimpleRun is a simpler alternative to Run that does not require streaming request.
+        As such, it is only usable for small payloads and does not support chunks.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_ScriptRunnerServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'Run': grpc.stream_stream_rpc_method_handler(
                     servicer.Run,
                     request_deserializer=syncano_dot_codebox_dot_broker_dot_v1_dot_broker__pb2.RunRequest.FromString,
+                    response_serializer=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.RunResponse.SerializeToString,
+            ),
+            'SimpleRun': grpc.unary_stream_rpc_method_handler(
+                    servicer.SimpleRun,
+                    request_deserializer=syncano_dot_codebox_dot_broker_dot_v1_dot_broker__pb2.SimpleRunRequest.FromString,
                     response_serializer=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.RunResponse.SerializeToString,
             ),
     }
@@ -61,6 +79,22 @@ class ScriptRunner(object):
             metadata=None):
         return grpc.experimental.stream_stream(request_iterator, target, '/syncano.codebox.broker.v1.ScriptRunner/Run',
             syncano_dot_codebox_dot_broker_dot_v1_dot_broker__pb2.RunRequest.SerializeToString,
+            syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.RunResponse.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def SimpleRun(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_stream(request, target, '/syncano.codebox.broker.v1.ScriptRunner/SimpleRun',
+            syncano_dot_codebox_dot_broker_dot_v1_dot_broker__pb2.SimpleRunRequest.SerializeToString,
             syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.RunResponse.FromString,
             options, channel_credentials,
             call_credentials, compression, wait_for_ready, timeout, metadata)

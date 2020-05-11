@@ -8,6 +8,9 @@ import "syncano/codebox/script/v1/script.proto";
 service ScriptRunner {
   // Run runs script in secure environment.
   rpc Run (stream RunRequest) returns (stream script.v1.RunResponse);
+  // SimpleRun is a simpler alternative to Run that does not require streaming request.
+  // As such, it is only usable for small payloads and does not support chunks.
+  rpc SimpleRun (SimpleRunRequest) returns (stream script.v1.RunResponse);
 }
 
 // RunRequest represents either a Meta message, LB Meta or a Chunk message.
@@ -28,4 +31,10 @@ message RunRequest {
     script.v1.RunRequest.Meta script_meta = 3;
     script.v1.RunRequest.Chunk script_chunk = 4;
   }
+}
+
+message SimpleRunRequest {
+  RunRequest.Meta meta = 1;
+  lb.v1.RunRequest.Meta lb_meta = 2;
+  script.v1.RunRequest.Meta script_meta = 3;
 }
