@@ -1,6 +1,6 @@
 from distutils.core import setup
-import re
 import os
+
 
 def find_packages(path='.'):
     ret = []
@@ -9,9 +9,9 @@ def find_packages(path='.'):
             ret.append(root)
     return ret
 
-print(list(find_packages('syncano')))
+
 setup(
     name='syncanoapis',
-    version='0.1dev',
+    version='0.1',
     packages=list(find_packages('syncano')),
 )
