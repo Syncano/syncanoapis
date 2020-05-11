@@ -32,7 +32,7 @@ const (
 const _ = proto.ProtoPackageIsVersion4
 
 // RunRequest represents either a Meta message, LB Meta or a Chunk message.
-// It should always consist of exactly 1 Meta, 1 LB Meta and optionally repeated Chunk messages.
+// It should always consist of exactly 1 Meta, 1 LB Meta, 1 Script Meta and optionally repeated Script Chunk messages.
 type RunRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
