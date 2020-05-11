@@ -20,6 +20,7 @@ message RunRequest {
 
   oneof value {
     Meta meta = 1;
-    script.v1.RunRequest request = 2;
+    script.v1.RunRequest.Meta script_meta = 2;
+    script.v1.RunRequest.Chunk script_chunk = 3;
   }
 }

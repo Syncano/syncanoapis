@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='syncano.codebox.lb.v1',
   syntax='proto3',
   serialized_options=b'Z>github.com/Syncano/syncanoapis/gen/go/syncano/codebox/lb/v1;lb',
-  serialized_pb=b'\n\"syncano/codebox/lb/v1/runner.proto\x12\x15syncano.codebox.lb.v1\x1a&syncano/codebox/script/v1/script.proto\"\xc3\x01\n\nRunRequest\x12\x36\n\x04meta\x18\x01 \x01(\x0b\x32&.syncano.codebox.lb.v1.RunRequest.MetaH\x00\x12\x38\n\x07request\x18\x02 \x01(\x0b\x32%.syncano.codebox.script.v1.RunRequestH\x00\x1a:\n\x04Meta\x12\x17\n\x0f\x63oncurrency_key\x18\x01 \x01(\t\x12\x19\n\x11\x63oncurrency_limit\x18\x02 \x01(\x05\x42\x07\n\x05value2d\n\x0cScriptRunner\x12T\n\x03Run\x12!.syncano.codebox.lb.v1.RunRequest\x1a&.syncano.codebox.script.v1.RunResponse(\x01\x30\x01\x42@Z>github.com/Syncano/syncanoapis/gen/go/syncano/codebox/lb/v1;lbb\x06proto3'
+  serialized_pb=b'\n\"syncano/codebox/lb/v1/runner.proto\x12\x15syncano.codebox.lb.v1\x1a&syncano/codebox/script/v1/script.proto\"\x91\x02\n\nRunRequest\x12\x36\n\x04meta\x18\x01 \x01(\x0b\x32&.syncano.codebox.lb.v1.RunRequest.MetaH\x00\x12\x41\n\x0bscript_meta\x18\x02 \x01(\x0b\x32*.syncano.codebox.script.v1.RunRequest.MetaH\x00\x12\x43\n\x0cscript_chunk\x18\x03 \x01(\x0b\x32+.syncano.codebox.script.v1.RunRequest.ChunkH\x00\x1a:\n\x04Meta\x12\x17\n\x0f\x63oncurrency_key\x18\x01 \x01(\t\x12\x19\n\x11\x63oncurrency_limit\x18\x02 \x01(\x05\x42\x07\n\x05value2d\n\x0cScriptRunner\x12T\n\x03Run\x12!.syncano.codebox.lb.v1.RunRequest\x1a&.syncano.codebox.script.v1.RunResponse(\x01\x30\x01\x42@Z>github.com/Syncano/syncanoapis/gen/go/syncano/codebox/lb/v1;lbb\x06proto3'
   ,
   dependencies=[syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.DESCRIPTOR,])
 
@@ -59,8 +59,8 @@ _RUNREQUEST_META = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=230,
-  serialized_end=288,
+  serialized_start=308,
+  serialized_end=366,
 )
 
 _RUNREQUEST = _descriptor.Descriptor(
@@ -78,8 +78,15 @@ _RUNREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='request', full_name='syncano.codebox.lb.v1.RunRequest.request', index=1,
+      name='script_meta', full_name='syncano.codebox.lb.v1.RunRequest.script_meta', index=1,
       number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='script_chunk', full_name='syncano.codebox.lb.v1.RunRequest.script_chunk', index=2,
+      number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -100,18 +107,22 @@ _RUNREQUEST = _descriptor.Descriptor(
       index=0, containing_type=None, fields=[]),
   ],
   serialized_start=102,
-  serialized_end=297,
+  serialized_end=375,
 )
 
 _RUNREQUEST_META.containing_type = _RUNREQUEST
 _RUNREQUEST.fields_by_name['meta'].message_type = _RUNREQUEST_META
-_RUNREQUEST.fields_by_name['request'].message_type = syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2._RUNREQUEST
+_RUNREQUEST.fields_by_name['script_meta'].message_type = syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2._RUNREQUEST_META
+_RUNREQUEST.fields_by_name['script_chunk'].message_type = syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2._RUNREQUEST_CHUNK
 _RUNREQUEST.oneofs_by_name['value'].fields.append(
   _RUNREQUEST.fields_by_name['meta'])
 _RUNREQUEST.fields_by_name['meta'].containing_oneof = _RUNREQUEST.oneofs_by_name['value']
 _RUNREQUEST.oneofs_by_name['value'].fields.append(
-  _RUNREQUEST.fields_by_name['request'])
-_RUNREQUEST.fields_by_name['request'].containing_oneof = _RUNREQUEST.oneofs_by_name['value']
+  _RUNREQUEST.fields_by_name['script_meta'])
+_RUNREQUEST.fields_by_name['script_meta'].containing_oneof = _RUNREQUEST.oneofs_by_name['value']
+_RUNREQUEST.oneofs_by_name['value'].fields.append(
+  _RUNREQUEST.fields_by_name['script_chunk'])
+_RUNREQUEST.fields_by_name['script_chunk'].containing_oneof = _RUNREQUEST.oneofs_by_name['value']
 DESCRIPTOR.message_types_by_name['RunRequest'] = _RUNREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -139,8 +150,8 @@ _SCRIPTRUNNER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=299,
-  serialized_end=399,
+  serialized_start=377,
+  serialized_end=477,
   methods=[
   _descriptor.MethodDescriptor(
     name='Run',

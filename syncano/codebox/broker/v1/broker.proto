@@ -25,6 +25,7 @@ message RunRequest {
   oneof value {
     Meta meta = 1;
     lb.v1.RunRequest.Meta lb_meta = 2;
-    script.v1.RunRequest request = 3;
+    script.v1.RunRequest.Meta script_meta = 3;
+    script.v1.RunRequest.Chunk script_chunk = 4;
   }
 }

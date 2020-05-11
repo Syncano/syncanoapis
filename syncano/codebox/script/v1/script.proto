@@ -4,7 +4,7 @@ option go_package = "github.com/Syncano/syncanoapis/gen/go/syncano/codebox/scrip
 
 service ScriptRunner {
   // Run runs script in secure environment of worker.
-  rpc Run (RunRequest) returns (stream RunResponse);
+  rpc Run (stream RunRequest) returns (stream RunResponse);
 }
 
 // RunRequest represents a Meta message and optionally repeated Chunk message.
@@ -44,8 +44,10 @@ message RunRequest {
     Type type = 5;
   }
 
-  Meta meta = 1;
-  repeated Chunk chunk = 2;
+  oneof value {
+    Meta meta = 1;
+    Chunk chunk = 2;
+  }
 }
 
 // HTTPResponseMessage describes custom response from script.
