@@ -19,36 +19,29 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='syncano.codebox.lb.v1',
   syntax='proto3',
   serialized_options=b'Z>github.com/Syncano/syncanoapis/gen/go/syncano/codebox/lb/v1;lb',
-  serialized_pb=b'\n\"syncano/codebox/lb/v1/runner.proto\x12\x15syncano.codebox.lb.v1\x1a&syncano/codebox/script/v1/script.proto\"\xe5\x01\n\nRunRequest\x12=\n\x04meta\x18\x01 \x01(\x0b\x32-.syncano.codebox.lb.v1.RunRequest.MetaMessageH\x00\x12\x38\n\x07request\x18\x02 \x01(\x0b\x32%.syncano.codebox.script.v1.RunRequestH\x00\x1aU\n\x0bMetaMessage\x12\x12\n\nrequest_id\x18\x03 \x01(\t\x12\x17\n\x0f\x63oncurrency_key\x18\x01 \x01(\t\x12\x19\n\x11\x63oncurrency_limit\x18\x02 \x01(\x05\x42\x07\n\x05value2d\n\x0cScriptRunner\x12T\n\x03Run\x12!.syncano.codebox.lb.v1.RunRequest\x1a&.syncano.codebox.script.v1.RunResponse(\x01\x30\x01\x42@Z>github.com/Syncano/syncanoapis/gen/go/syncano/codebox/lb/v1;lbb\x06proto3'
+  serialized_pb=b'\n\"syncano/codebox/lb/v1/runner.proto\x12\x15syncano.codebox.lb.v1\x1a&syncano/codebox/script/v1/script.proto\"\xc3\x01\n\nRunRequest\x12\x36\n\x04meta\x18\x01 \x01(\x0b\x32&.syncano.codebox.lb.v1.RunRequest.MetaH\x00\x12\x38\n\x07request\x18\x02 \x01(\x0b\x32%.syncano.codebox.script.v1.RunRequestH\x00\x1a:\n\x04Meta\x12\x17\n\x0f\x63oncurrency_key\x18\x01 \x01(\t\x12\x19\n\x11\x63oncurrency_limit\x18\x02 \x01(\x05\x42\x07\n\x05value2d\n\x0cScriptRunner\x12T\n\x03Run\x12!.syncano.codebox.lb.v1.RunRequest\x1a&.syncano.codebox.script.v1.RunResponse(\x01\x30\x01\x42@Z>github.com/Syncano/syncanoapis/gen/go/syncano/codebox/lb/v1;lbb\x06proto3'
   ,
   dependencies=[syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.DESCRIPTOR,])
 
 
 
 
-_RUNREQUEST_METAMESSAGE = _descriptor.Descriptor(
-  name='MetaMessage',
-  full_name='syncano.codebox.lb.v1.RunRequest.MetaMessage',
+_RUNREQUEST_META = _descriptor.Descriptor(
+  name='Meta',
+  full_name='syncano.codebox.lb.v1.RunRequest.Meta',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='request_id', full_name='syncano.codebox.lb.v1.RunRequest.MetaMessage.request_id', index=0,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='concurrency_key', full_name='syncano.codebox.lb.v1.RunRequest.MetaMessage.concurrency_key', index=1,
+      name='concurrency_key', full_name='syncano.codebox.lb.v1.RunRequest.Meta.concurrency_key', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='concurrency_limit', full_name='syncano.codebox.lb.v1.RunRequest.MetaMessage.concurrency_limit', index=2,
+      name='concurrency_limit', full_name='syncano.codebox.lb.v1.RunRequest.Meta.concurrency_limit', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -66,8 +59,8 @@ _RUNREQUEST_METAMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=237,
-  serialized_end=322,
+  serialized_start=230,
+  serialized_end=288,
 )
 
 _RUNREQUEST = _descriptor.Descriptor(
@@ -94,7 +87,7 @@ _RUNREQUEST = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_RUNREQUEST_METAMESSAGE, ],
+  nested_types=[_RUNREQUEST_META, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -107,11 +100,11 @@ _RUNREQUEST = _descriptor.Descriptor(
       index=0, containing_type=None, fields=[]),
   ],
   serialized_start=102,
-  serialized_end=331,
+  serialized_end=297,
 )
 
-_RUNREQUEST_METAMESSAGE.containing_type = _RUNREQUEST
-_RUNREQUEST.fields_by_name['meta'].message_type = _RUNREQUEST_METAMESSAGE
+_RUNREQUEST_META.containing_type = _RUNREQUEST
+_RUNREQUEST.fields_by_name['meta'].message_type = _RUNREQUEST_META
 _RUNREQUEST.fields_by_name['request'].message_type = syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2._RUNREQUEST
 _RUNREQUEST.oneofs_by_name['value'].fields.append(
   _RUNREQUEST.fields_by_name['meta'])
@@ -124,10 +117,10 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 RunRequest = _reflection.GeneratedProtocolMessageType('RunRequest', (_message.Message,), {
 
-  'MetaMessage' : _reflection.GeneratedProtocolMessageType('MetaMessage', (_message.Message,), {
-    'DESCRIPTOR' : _RUNREQUEST_METAMESSAGE,
+  'Meta' : _reflection.GeneratedProtocolMessageType('Meta', (_message.Message,), {
+    'DESCRIPTOR' : _RUNREQUEST_META,
     '__module__' : 'syncano.codebox.lb.v1.runner_pb2'
-    # @@protoc_insertion_point(class_scope:syncano.codebox.lb.v1.RunRequest.MetaMessage)
+    # @@protoc_insertion_point(class_scope:syncano.codebox.lb.v1.RunRequest.Meta)
     })
   ,
   'DESCRIPTOR' : _RUNREQUEST,
@@ -135,7 +128,7 @@ RunRequest = _reflection.GeneratedProtocolMessageType('RunRequest', (_message.Me
   # @@protoc_insertion_point(class_scope:syncano.codebox.lb.v1.RunRequest)
   })
 _sym_db.RegisterMessage(RunRequest)
-_sym_db.RegisterMessage(RunRequest.MetaMessage)
+_sym_db.RegisterMessage(RunRequest.Meta)
 
 
 DESCRIPTOR._options = None
@@ -146,8 +139,8 @@ _SCRIPTRUNNER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=333,
-  serialized_end=433,
+  serialized_start=299,
+  serialized_end=399,
   methods=[
   _descriptor.MethodDescriptor(
     name='Run',

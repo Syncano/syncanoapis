@@ -7,14 +7,14 @@ import "syncano/codebox/script/v1/script.proto";
 
 service ScriptRunner {
   // Run runs script in secure environment.
-  rpc Run (RunRequest) returns (stream script.v1.RunResponse);
+  rpc Run (stream RunRequest) returns (stream script.v1.RunResponse);
 }
 
-// RunRequest represents either a Meta message or a Chunk message.
-// It should always consist of exactly 1 Meta and optionally repeated Chunk messages.
+// RunRequest represents either a Meta message, LB Meta or a Chunk message.
+// It should always consist of exactly 1 Meta, 1 LB Meta, 1 Script Meta and optionally repeated Script Chunk messages.
 message RunRequest {
   // Meta message specifies fields to describe what is being run.
-  message MetaMessage {
+  message Meta {
     map<string, string> files = 1; // Map of script file URL->Name.
     string environment_url = 2; // Environment file URL.
     bytes trace = 3;
@@ -22,7 +22,9 @@ message RunRequest {
     bool sync = 5;
   }
 
-  MetaMessage meta = 1;
-  lb.v1.RunRequest.MetaMessage lb_meta = 2;
-  repeated script.v1.RunRequest request = 3;
+  oneof value {
+    Meta meta = 1;
+    lb.v1.RunRequest.Meta lb_meta = 2;
+    script.v1.RunRequest request = 3;
+  }
 }

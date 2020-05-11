@@ -14,7 +14,7 @@ class ScriptRunnerStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.Run = channel.unary_stream(
+        self.Run = channel.stream_stream(
                 '/syncano.codebox.broker.v1.ScriptRunner/Run',
                 request_serializer=syncano_dot_codebox_dot_broker_dot_v1_dot_broker__pb2.RunRequest.SerializeToString,
                 response_deserializer=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.RunResponse.FromString,
@@ -24,7 +24,7 @@ class ScriptRunnerStub(object):
 class ScriptRunnerServicer(object):
     """Missing associated documentation comment in .proto file"""
 
-    def Run(self, request, context):
+    def Run(self, request_iterator, context):
         """Run runs script in secure environment.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -34,7 +34,7 @@ class ScriptRunnerServicer(object):
 
 def add_ScriptRunnerServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'Run': grpc.unary_stream_rpc_method_handler(
+            'Run': grpc.stream_stream_rpc_method_handler(
                     servicer.Run,
                     request_deserializer=syncano_dot_codebox_dot_broker_dot_v1_dot_broker__pb2.RunRequest.FromString,
                     response_serializer=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.RunResponse.SerializeToString,
@@ -50,7 +50,7 @@ class ScriptRunner(object):
     """Missing associated documentation comment in .proto file"""
 
     @staticmethod
-    def Run(request,
+    def Run(request_iterator,
             target,
             options=(),
             channel_credentials=None,
@@ -59,7 +59,7 @@ class ScriptRunner(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/syncano.codebox.broker.v1.ScriptRunner/Run',
+        return grpc.experimental.stream_stream(request_iterator, target, '/syncano.codebox.broker.v1.ScriptRunner/Run',
             syncano_dot_codebox_dot_broker_dot_v1_dot_broker__pb2.RunRequest.SerializeToString,
             syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.RunResponse.FromString,
             options, channel_credentials,

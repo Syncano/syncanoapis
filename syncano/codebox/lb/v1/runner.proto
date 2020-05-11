@@ -10,17 +10,16 @@ service ScriptRunner {
 }
 
 // RunRequest represents either a Meta message or a Chunk message.
-// It should always consist of exactly 1 Meta and optionally repeated Chunk messages.
+// It should always consist of exactly 1 Meta, 1 Script Meta and optionally repeated Chunk messages.
 message RunRequest {
   // Meta message specifies fields to describe what is being run.
-  message MetaMessage {
-    string request_id = 3; // Unique request ID.
+  message Meta {
     string concurrency_key = 1; // Key on which concurrency limiting will take place.
     int32 concurrency_limit = 2; // Max concurrency allowed for key.
   }
 
   oneof value {
-    MetaMessage meta = 1;
+    Meta meta = 1;
     script.v1.RunRequest request = 2;
   }
 }
