@@ -18,18 +18,18 @@ message ExistsResponse {
   bool ok = 1;
 }
 
-message UploadRequest {
-  message MetaMessage {
-    string key = 1;
-  }
-  message ChunkMessage {
-    string name = 1;
-    bytes data = 2;
-  }
+message UploadMetaMessage {
+  string key = 1;
+}
+message UploadChunkMessage {
+  string name = 1;
+  bytes data = 2;
+}
 
+message UploadRequest {
   oneof value {
-    MetaMessage meta = 1;
-    ChunkMessage chunk = 2;
+    UploadMetaMessage meta = 1;
+    UploadChunkMessage chunk = 2;
     bool done = 3;
   }
 }

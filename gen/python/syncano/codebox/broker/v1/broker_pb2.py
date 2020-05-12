@@ -20,29 +20,29 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='syncano.codebox.broker.v1',
   syntax='proto3',
   serialized_options=b'ZFgithub.com/Syncano/syncanoapis/gen/go/syncano/codebox/broker/v1;broker',
-  serialized_pb=b'\n&syncano/codebox/broker/v1/broker.proto\x12\x19syncano.codebox.broker.v1\x1a\"syncano/codebox/lb/v1/runner.proto\x1a&syncano/codebox/script/v1/script.proto\"\xd9\x03\n\nRunRequest\x12:\n\x04meta\x18\x01 \x01(\x0b\x32*.syncano.codebox.broker.v1.RunRequest.MetaH\x00\x12\x39\n\x07lb_meta\x18\x02 \x01(\x0b\x32&.syncano.codebox.lb.v1.RunRequest.MetaH\x00\x12\x41\n\x0bscript_meta\x18\x03 \x01(\x0b\x32*.syncano.codebox.script.v1.RunRequest.MetaH\x00\x12\x43\n\x0cscript_chunk\x18\x04 \x01(\x0b\x32+.syncano.codebox.script.v1.RunRequest.ChunkH\x00\x1a\xc2\x01\n\x04Meta\x12\x44\n\x05\x66iles\x18\x01 \x03(\x0b\x32\x35.syncano.codebox.broker.v1.RunRequest.Meta.FilesEntry\x12\x17\n\x0f\x65nvironment_url\x18\x02 \x01(\t\x12\r\n\x05trace\x18\x03 \x01(\x0c\x12\x10\n\x08trace_id\x18\x04 \x01(\x04\x12\x0c\n\x04sync\x18\x05 \x01(\x08\x1a,\n\nFilesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42\x07\n\x05value\"\xc6\x01\n\x10SimpleRunRequest\x12\x38\n\x04meta\x18\x01 \x01(\x0b\x32*.syncano.codebox.broker.v1.RunRequest.Meta\x12\x37\n\x07lb_meta\x18\x02 \x01(\x0b\x32&.syncano.codebox.lb.v1.RunRequest.Meta\x12?\n\x0bscript_meta\x18\x03 \x01(\x0b\x32*.syncano.codebox.script.v1.RunRequest.Meta2\xcc\x01\n\x0cScriptRunner\x12X\n\x03Run\x12%.syncano.codebox.broker.v1.RunRequest\x1a&.syncano.codebox.script.v1.RunResponse(\x01\x30\x01\x12\x62\n\tSimpleRun\x12+.syncano.codebox.broker.v1.SimpleRunRequest\x1a&.syncano.codebox.script.v1.RunResponse0\x01\x42HZFgithub.com/Syncano/syncanoapis/gen/go/syncano/codebox/broker/v1;brokerb\x06proto3'
+  serialized_pb=b'\n&syncano/codebox/broker/v1/broker.proto\x12\x19syncano.codebox.broker.v1\x1a\"syncano/codebox/lb/v1/runner.proto\x1a&syncano/codebox/script/v1/script.proto\"\xbd\x01\n\x07RunMeta\x12<\n\x05\x66iles\x18\x01 \x03(\x0b\x32-.syncano.codebox.broker.v1.RunMeta.FilesEntry\x12\x17\n\x0f\x65nvironment_url\x18\x02 \x01(\t\x12\r\n\x05trace\x18\x03 \x01(\x0c\x12\x10\n\x08trace_id\x18\x04 \x01(\x04\x12\x0c\n\x04sync\x18\x05 \x01(\x08\x1a,\n\nFilesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xf4\x01\n\nRunRequest\x12\x32\n\x04meta\x18\x01 \x01(\x0b\x32\".syncano.codebox.broker.v1.RunMetaH\x00\x12\x31\n\x07lb_meta\x18\x02 \x01(\x0b\x32\x1e.syncano.codebox.lb.v1.RunMetaH\x00\x12\x39\n\x0bscript_meta\x18\x03 \x01(\x0b\x32\".syncano.codebox.script.v1.RunMetaH\x00\x12;\n\x0cscript_chunk\x18\x04 \x01(\x0b\x32#.syncano.codebox.script.v1.RunChunkH\x00\x42\x07\n\x05value\"\xae\x01\n\x10SimpleRunRequest\x12\x30\n\x04meta\x18\x01 \x01(\x0b\x32\".syncano.codebox.broker.v1.RunMeta\x12/\n\x07lb_meta\x18\x02 \x01(\x0b\x32\x1e.syncano.codebox.lb.v1.RunMeta\x12\x37\n\x0bscript_meta\x18\x03 \x01(\x0b\x32\".syncano.codebox.script.v1.RunMeta2\xcc\x01\n\x0cScriptRunner\x12X\n\x03Run\x12%.syncano.codebox.broker.v1.RunRequest\x1a&.syncano.codebox.script.v1.RunResponse(\x01\x30\x01\x12\x62\n\tSimpleRun\x12+.syncano.codebox.broker.v1.SimpleRunRequest\x1a&.syncano.codebox.script.v1.RunResponse0\x01\x42HZFgithub.com/Syncano/syncanoapis/gen/go/syncano/codebox/broker/v1;brokerb\x06proto3'
   ,
   dependencies=[syncano_dot_codebox_dot_lb_dot_v1_dot_runner__pb2.DESCRIPTOR,syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.DESCRIPTOR,])
 
 
 
 
-_RUNREQUEST_META_FILESENTRY = _descriptor.Descriptor(
+_RUNMETA_FILESENTRY = _descriptor.Descriptor(
   name='FilesEntry',
-  full_name='syncano.codebox.broker.v1.RunRequest.Meta.FilesEntry',
+  full_name='syncano.codebox.broker.v1.RunMeta.FilesEntry',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='syncano.codebox.broker.v1.RunRequest.Meta.FilesEntry.key', index=0,
+      name='key', full_name='syncano.codebox.broker.v1.RunMeta.FilesEntry.key', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='syncano.codebox.broker.v1.RunRequest.Meta.FilesEntry.value', index=1,
+      name='value', full_name='syncano.codebox.broker.v1.RunMeta.FilesEntry.value', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -60,47 +60,47 @@ _RUNREQUEST_META_FILESENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=566,
-  serialized_end=610,
+  serialized_start=291,
+  serialized_end=335,
 )
 
-_RUNREQUEST_META = _descriptor.Descriptor(
-  name='Meta',
-  full_name='syncano.codebox.broker.v1.RunRequest.Meta',
+_RUNMETA = _descriptor.Descriptor(
+  name='RunMeta',
+  full_name='syncano.codebox.broker.v1.RunMeta',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='files', full_name='syncano.codebox.broker.v1.RunRequest.Meta.files', index=0,
+      name='files', full_name='syncano.codebox.broker.v1.RunMeta.files', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='environment_url', full_name='syncano.codebox.broker.v1.RunRequest.Meta.environment_url', index=1,
+      name='environment_url', full_name='syncano.codebox.broker.v1.RunMeta.environment_url', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='trace', full_name='syncano.codebox.broker.v1.RunRequest.Meta.trace', index=2,
+      name='trace', full_name='syncano.codebox.broker.v1.RunMeta.trace', index=2,
       number=3, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='trace_id', full_name='syncano.codebox.broker.v1.RunRequest.Meta.trace_id', index=3,
+      name='trace_id', full_name='syncano.codebox.broker.v1.RunMeta.trace_id', index=3,
       number=4, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='sync', full_name='syncano.codebox.broker.v1.RunRequest.Meta.sync', index=4,
+      name='sync', full_name='syncano.codebox.broker.v1.RunMeta.sync', index=4,
       number=5, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -109,7 +109,7 @@ _RUNREQUEST_META = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_RUNREQUEST_META_FILESENTRY, ],
+  nested_types=[_RUNMETA_FILESENTRY, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -118,9 +118,10 @@ _RUNREQUEST_META = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=416,
-  serialized_end=610,
+  serialized_start=146,
+  serialized_end=335,
 )
+
 
 _RUNREQUEST = _descriptor.Descriptor(
   name='RunRequest',
@@ -160,7 +161,7 @@ _RUNREQUEST = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_RUNREQUEST_META, ],
+  nested_types=[],
   enum_types=[
   ],
   serialized_options=None,
@@ -172,8 +173,8 @@ _RUNREQUEST = _descriptor.Descriptor(
       name='value', full_name='syncano.codebox.broker.v1.RunRequest.value',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=146,
-  serialized_end=619,
+  serialized_start=338,
+  serialized_end=582,
 )
 
 
@@ -217,17 +218,16 @@ _SIMPLERUNREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=622,
-  serialized_end=820,
+  serialized_start=585,
+  serialized_end=759,
 )
 
-_RUNREQUEST_META_FILESENTRY.containing_type = _RUNREQUEST_META
-_RUNREQUEST_META.fields_by_name['files'].message_type = _RUNREQUEST_META_FILESENTRY
-_RUNREQUEST_META.containing_type = _RUNREQUEST
-_RUNREQUEST.fields_by_name['meta'].message_type = _RUNREQUEST_META
-_RUNREQUEST.fields_by_name['lb_meta'].message_type = syncano_dot_codebox_dot_lb_dot_v1_dot_runner__pb2._RUNREQUEST_META
-_RUNREQUEST.fields_by_name['script_meta'].message_type = syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2._RUNREQUEST_META
-_RUNREQUEST.fields_by_name['script_chunk'].message_type = syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2._RUNREQUEST_CHUNK
+_RUNMETA_FILESENTRY.containing_type = _RUNMETA
+_RUNMETA.fields_by_name['files'].message_type = _RUNMETA_FILESENTRY
+_RUNREQUEST.fields_by_name['meta'].message_type = _RUNMETA
+_RUNREQUEST.fields_by_name['lb_meta'].message_type = syncano_dot_codebox_dot_lb_dot_v1_dot_runner__pb2._RUNMETA
+_RUNREQUEST.fields_by_name['script_meta'].message_type = syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2._RUNMETA
+_RUNREQUEST.fields_by_name['script_chunk'].message_type = syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2._RUNCHUNK
 _RUNREQUEST.oneofs_by_name['value'].fields.append(
   _RUNREQUEST.fields_by_name['meta'])
 _RUNREQUEST.fields_by_name['meta'].containing_oneof = _RUNREQUEST.oneofs_by_name['value']
@@ -240,35 +240,35 @@ _RUNREQUEST.fields_by_name['script_meta'].containing_oneof = _RUNREQUEST.oneofs_
 _RUNREQUEST.oneofs_by_name['value'].fields.append(
   _RUNREQUEST.fields_by_name['script_chunk'])
 _RUNREQUEST.fields_by_name['script_chunk'].containing_oneof = _RUNREQUEST.oneofs_by_name['value']
-_SIMPLERUNREQUEST.fields_by_name['meta'].message_type = _RUNREQUEST_META
-_SIMPLERUNREQUEST.fields_by_name['lb_meta'].message_type = syncano_dot_codebox_dot_lb_dot_v1_dot_runner__pb2._RUNREQUEST_META
-_SIMPLERUNREQUEST.fields_by_name['script_meta'].message_type = syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2._RUNREQUEST_META
+_SIMPLERUNREQUEST.fields_by_name['meta'].message_type = _RUNMETA
+_SIMPLERUNREQUEST.fields_by_name['lb_meta'].message_type = syncano_dot_codebox_dot_lb_dot_v1_dot_runner__pb2._RUNMETA
+_SIMPLERUNREQUEST.fields_by_name['script_meta'].message_type = syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2._RUNMETA
+DESCRIPTOR.message_types_by_name['RunMeta'] = _RUNMETA
 DESCRIPTOR.message_types_by_name['RunRequest'] = _RUNREQUEST
 DESCRIPTOR.message_types_by_name['SimpleRunRequest'] = _SIMPLERUNREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-RunRequest = _reflection.GeneratedProtocolMessageType('RunRequest', (_message.Message,), {
+RunMeta = _reflection.GeneratedProtocolMessageType('RunMeta', (_message.Message,), {
 
-  'Meta' : _reflection.GeneratedProtocolMessageType('Meta', (_message.Message,), {
-
-    'FilesEntry' : _reflection.GeneratedProtocolMessageType('FilesEntry', (_message.Message,), {
-      'DESCRIPTOR' : _RUNREQUEST_META_FILESENTRY,
-      '__module__' : 'syncano.codebox.broker.v1.broker_pb2'
-      # @@protoc_insertion_point(class_scope:syncano.codebox.broker.v1.RunRequest.Meta.FilesEntry)
-      })
-    ,
-    'DESCRIPTOR' : _RUNREQUEST_META,
+  'FilesEntry' : _reflection.GeneratedProtocolMessageType('FilesEntry', (_message.Message,), {
+    'DESCRIPTOR' : _RUNMETA_FILESENTRY,
     '__module__' : 'syncano.codebox.broker.v1.broker_pb2'
-    # @@protoc_insertion_point(class_scope:syncano.codebox.broker.v1.RunRequest.Meta)
+    # @@protoc_insertion_point(class_scope:syncano.codebox.broker.v1.RunMeta.FilesEntry)
     })
   ,
+  'DESCRIPTOR' : _RUNMETA,
+  '__module__' : 'syncano.codebox.broker.v1.broker_pb2'
+  # @@protoc_insertion_point(class_scope:syncano.codebox.broker.v1.RunMeta)
+  })
+_sym_db.RegisterMessage(RunMeta)
+_sym_db.RegisterMessage(RunMeta.FilesEntry)
+
+RunRequest = _reflection.GeneratedProtocolMessageType('RunRequest', (_message.Message,), {
   'DESCRIPTOR' : _RUNREQUEST,
   '__module__' : 'syncano.codebox.broker.v1.broker_pb2'
   # @@protoc_insertion_point(class_scope:syncano.codebox.broker.v1.RunRequest)
   })
 _sym_db.RegisterMessage(RunRequest)
-_sym_db.RegisterMessage(RunRequest.Meta)
-_sym_db.RegisterMessage(RunRequest.Meta.FilesEntry)
 
 SimpleRunRequest = _reflection.GeneratedProtocolMessageType('SimpleRunRequest', (_message.Message,), {
   'DESCRIPTOR' : _SIMPLERUNREQUEST,
@@ -279,7 +279,7 @@ _sym_db.RegisterMessage(SimpleRunRequest)
 
 
 DESCRIPTOR._options = None
-_RUNREQUEST_META_FILESENTRY._options = None
+_RUNMETA_FILESENTRY._options = None
 
 _SCRIPTRUNNER = _descriptor.ServiceDescriptor(
   name='ScriptRunner',
@@ -287,8 +287,8 @@ _SCRIPTRUNNER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=823,
-  serialized_end=1027,
+  serialized_start=762,
+  serialized_end=966,
   methods=[
   _descriptor.MethodDescriptor(
     name='Run',

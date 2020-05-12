@@ -18,14 +18,14 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='syncano.codebox.script.v1',
   syntax='proto3',
   serialized_options=b'ZFgithub.com/Syncano/syncanoapis/gen/go/syncano/codebox/script/v1;script',
-  serialized_pb=b'\n&syncano/codebox/script/v1/script.proto\x12\x19syncano.codebox.script.v1\"\xfa\x04\n\nRunRequest\x12:\n\x04meta\x18\x01 \x01(\x0b\x32*.syncano.codebox.script.v1.RunRequest.MetaH\x00\x12<\n\x05\x63hunk\x18\x02 \x01(\x0b\x32+.syncano.codebox.script.v1.RunRequest.ChunkH\x00\x1a\xbb\x02\n\x04Meta\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12\x0f\n\x07runtime\x18\x02 \x01(\t\x12\x13\n\x0bsource_hash\x18\x03 \x01(\t\x12\x0f\n\x07user_id\x18\x04 \x01(\t\x12\x43\n\x07options\x18\x05 \x01(\x0b\x32\x32.syncano.codebox.script.v1.RunRequest.Meta.Options\x12\x13\n\x0b\x65nvironment\x18\x06 \x01(\t\x1a\x8d\x01\n\x07Options\x12\x12\n\nentrypoint\x18\x01 \x01(\t\x12\x14\n\x0coutput_limit\x18\x02 \x01(\r\x12\x0f\n\x07timeout\x18\x03 \x01(\x03\x12\x0c\n\x04mcpu\x18\x04 \x01(\r\x12\r\n\x05\x61sync\x18\x05 \x01(\r\x12\x0c\n\x04\x61rgs\x18\x06 \x01(\x0c\x12\x0e\n\x06\x63onfig\x18\x07 \x01(\x0c\x12\x0c\n\x04meta\x18\x08 \x01(\x0c\x1a\xaa\x01\n\x05\x43hunk\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x10\n\x08\x66ilename\x18\x02 \x01(\t\x12\x14\n\x0c\x63ontent_type\x18\x03 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x04 \x01(\x0c\x12>\n\x04type\x18\x05 \x01(\x0e\x32\x30.syncano.codebox.script.v1.RunRequest.Chunk.Type\"\x1d\n\x04Type\x12\x0b\n\x07GENERIC\x10\x00\x12\x08\n\x04\x41RGS\x10\x01\x42\x07\n\x05value\"\xc1\x01\n\x0cHTTPResponse\x12\x13\n\x0bstatus_code\x18\x01 \x01(\x05\x12\x14\n\x0c\x63ontent_type\x18\x02 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\x0c\x12\x45\n\x07headers\x18\x04 \x03(\x0b\x32\x34.syncano.codebox.script.v1.HTTPResponse.HeadersEntry\x1a.\n\x0cHeadersEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xc8\x01\n\x0bRunResponse\x12\x14\n\x0c\x63ontainer_id\x18\t \x01(\t\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0e\n\x06stdout\x18\x02 \x01(\x0c\x12\x0e\n\x06stderr\x18\x03 \x01(\x0c\x12\x39\n\x08response\x18\x04 \x01(\x0b\x32\'.syncano.codebox.script.v1.HTTPResponse\x12\x0c\n\x04took\x18\x05 \x01(\x03\x12\x0e\n\x06\x63\x61\x63hed\x18\x06 \x01(\x08\x12\x0c\n\x04time\x18\x07 \x01(\x03\x12\x0e\n\x06weight\x18\x08 \x01(\r2h\n\x0cScriptRunner\x12X\n\x03Run\x12%.syncano.codebox.script.v1.RunRequest\x1a&.syncano.codebox.script.v1.RunResponse(\x01\x30\x01\x42HZFgithub.com/Syncano/syncanoapis/gen/go/syncano/codebox/script/v1;scriptb\x06proto3'
+  serialized_pb=b'\n&syncano/codebox/script/v1/script.proto\x12\x19syncano.codebox.script.v1\"\xb6\x02\n\x07RunMeta\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12\x0f\n\x07runtime\x18\x02 \x01(\t\x12\x13\n\x0bsource_hash\x18\x03 \x01(\t\x12\x0f\n\x07user_id\x18\x04 \x01(\t\x12;\n\x07options\x18\x05 \x01(\x0b\x32*.syncano.codebox.script.v1.RunMeta.Options\x12\x13\n\x0b\x65nvironment\x18\x06 \x01(\t\x1a\x8d\x01\n\x07Options\x12\x12\n\nentrypoint\x18\x01 \x01(\t\x12\x14\n\x0coutput_limit\x18\x02 \x01(\r\x12\x0f\n\x07timeout\x18\x03 \x01(\x03\x12\x0c\n\x04mcpu\x18\x04 \x01(\r\x12\r\n\x05\x61sync\x18\x05 \x01(\r\x12\x0c\n\x04\x61rgs\x18\x06 \x01(\x0c\x12\x0e\n\x06\x63onfig\x18\x07 \x01(\x0c\x12\x0c\n\x04meta\x18\x08 \x01(\x0c\"\xa5\x01\n\x08RunChunk\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x10\n\x08\x66ilename\x18\x02 \x01(\t\x12\x14\n\x0c\x63ontent_type\x18\x03 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x04 \x01(\x0c\x12\x36\n\x04type\x18\x05 \x01(\x0e\x32(.syncano.codebox.script.v1.RunChunk.Type\"\x1d\n\x04Type\x12\x0b\n\x07GENERIC\x10\x00\x12\x08\n\x04\x41RGS\x10\x01\"\x7f\n\nRunRequest\x12\x32\n\x04meta\x18\x01 \x01(\x0b\x32\".syncano.codebox.script.v1.RunMetaH\x00\x12\x34\n\x05\x63hunk\x18\x02 \x01(\x0b\x32#.syncano.codebox.script.v1.RunChunkH\x00\x42\x07\n\x05value\"\xc1\x01\n\x0cHTTPResponse\x12\x13\n\x0bstatus_code\x18\x01 \x01(\x05\x12\x14\n\x0c\x63ontent_type\x18\x02 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\x0c\x12\x45\n\x07headers\x18\x04 \x03(\x0b\x32\x34.syncano.codebox.script.v1.HTTPResponse.HeadersEntry\x1a.\n\x0cHeadersEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xc8\x01\n\x0bRunResponse\x12\x14\n\x0c\x63ontainer_id\x18\t \x01(\t\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0e\n\x06stdout\x18\x02 \x01(\x0c\x12\x0e\n\x06stderr\x18\x03 \x01(\x0c\x12\x39\n\x08response\x18\x04 \x01(\x0b\x32\'.syncano.codebox.script.v1.HTTPResponse\x12\x0c\n\x04took\x18\x05 \x01(\x03\x12\x0e\n\x06\x63\x61\x63hed\x18\x06 \x01(\x08\x12\x0c\n\x04time\x18\x07 \x01(\x03\x12\x0e\n\x06weight\x18\x08 \x01(\r2h\n\x0cScriptRunner\x12X\n\x03Run\x12%.syncano.codebox.script.v1.RunRequest\x1a&.syncano.codebox.script.v1.RunResponse(\x01\x30\x01\x42HZFgithub.com/Syncano/syncanoapis/gen/go/syncano/codebox/script/v1;scriptb\x06proto3'
 )
 
 
 
-_RUNREQUEST_CHUNK_TYPE = _descriptor.EnumDescriptor(
+_RUNCHUNK_TYPE = _descriptor.EnumDescriptor(
   name='Type',
-  full_name='syncano.codebox.script.v1.RunRequest.Chunk.Type',
+  full_name='syncano.codebox.script.v1.RunChunk.Type',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -40,70 +40,70 @@ _RUNREQUEST_CHUNK_TYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=666,
-  serialized_end=695,
+  serialized_start=519,
+  serialized_end=548,
 )
-_sym_db.RegisterEnumDescriptor(_RUNREQUEST_CHUNK_TYPE)
+_sym_db.RegisterEnumDescriptor(_RUNCHUNK_TYPE)
 
 
-_RUNREQUEST_META_OPTIONS = _descriptor.Descriptor(
+_RUNMETA_OPTIONS = _descriptor.Descriptor(
   name='Options',
-  full_name='syncano.codebox.script.v1.RunRequest.Meta.Options',
+  full_name='syncano.codebox.script.v1.RunMeta.Options',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='entrypoint', full_name='syncano.codebox.script.v1.RunRequest.Meta.Options.entrypoint', index=0,
+      name='entrypoint', full_name='syncano.codebox.script.v1.RunMeta.Options.entrypoint', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='output_limit', full_name='syncano.codebox.script.v1.RunRequest.Meta.Options.output_limit', index=1,
+      name='output_limit', full_name='syncano.codebox.script.v1.RunMeta.Options.output_limit', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='timeout', full_name='syncano.codebox.script.v1.RunRequest.Meta.Options.timeout', index=2,
+      name='timeout', full_name='syncano.codebox.script.v1.RunMeta.Options.timeout', index=2,
       number=3, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='mcpu', full_name='syncano.codebox.script.v1.RunRequest.Meta.Options.mcpu', index=3,
+      name='mcpu', full_name='syncano.codebox.script.v1.RunMeta.Options.mcpu', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='async', full_name='syncano.codebox.script.v1.RunRequest.Meta.Options.async', index=4,
+      name='async', full_name='syncano.codebox.script.v1.RunMeta.Options.async', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='args', full_name='syncano.codebox.script.v1.RunRequest.Meta.Options.args', index=5,
+      name='args', full_name='syncano.codebox.script.v1.RunMeta.Options.args', index=5,
       number=6, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='config', full_name='syncano.codebox.script.v1.RunRequest.Meta.Options.config', index=6,
+      name='config', full_name='syncano.codebox.script.v1.RunMeta.Options.config', index=6,
       number=7, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='meta', full_name='syncano.codebox.script.v1.RunRequest.Meta.Options.meta', index=7,
+      name='meta', full_name='syncano.codebox.script.v1.RunMeta.Options.meta', index=7,
       number=8, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
@@ -121,54 +121,54 @@ _RUNREQUEST_META_OPTIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=381,
-  serialized_end=522,
+  serialized_start=239,
+  serialized_end=380,
 )
 
-_RUNREQUEST_META = _descriptor.Descriptor(
-  name='Meta',
-  full_name='syncano.codebox.script.v1.RunRequest.Meta',
+_RUNMETA = _descriptor.Descriptor(
+  name='RunMeta',
+  full_name='syncano.codebox.script.v1.RunMeta',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='request_id', full_name='syncano.codebox.script.v1.RunRequest.Meta.request_id', index=0,
+      name='request_id', full_name='syncano.codebox.script.v1.RunMeta.request_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='runtime', full_name='syncano.codebox.script.v1.RunRequest.Meta.runtime', index=1,
+      name='runtime', full_name='syncano.codebox.script.v1.RunMeta.runtime', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='source_hash', full_name='syncano.codebox.script.v1.RunRequest.Meta.source_hash', index=2,
+      name='source_hash', full_name='syncano.codebox.script.v1.RunMeta.source_hash', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='user_id', full_name='syncano.codebox.script.v1.RunRequest.Meta.user_id', index=3,
+      name='user_id', full_name='syncano.codebox.script.v1.RunMeta.user_id', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='options', full_name='syncano.codebox.script.v1.RunRequest.Meta.options', index=4,
+      name='options', full_name='syncano.codebox.script.v1.RunMeta.options', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='environment', full_name='syncano.codebox.script.v1.RunRequest.Meta.environment', index=5,
+      name='environment', full_name='syncano.codebox.script.v1.RunMeta.environment', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -177,7 +177,7 @@ _RUNREQUEST_META = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_RUNREQUEST_META_OPTIONS, ],
+  nested_types=[_RUNMETA_OPTIONS, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -186,47 +186,48 @@ _RUNREQUEST_META = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=207,
-  serialized_end=522,
+  serialized_start=70,
+  serialized_end=380,
 )
 
-_RUNREQUEST_CHUNK = _descriptor.Descriptor(
-  name='Chunk',
-  full_name='syncano.codebox.script.v1.RunRequest.Chunk',
+
+_RUNCHUNK = _descriptor.Descriptor(
+  name='RunChunk',
+  full_name='syncano.codebox.script.v1.RunChunk',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='syncano.codebox.script.v1.RunRequest.Chunk.name', index=0,
+      name='name', full_name='syncano.codebox.script.v1.RunChunk.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='filename', full_name='syncano.codebox.script.v1.RunRequest.Chunk.filename', index=1,
+      name='filename', full_name='syncano.codebox.script.v1.RunChunk.filename', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='content_type', full_name='syncano.codebox.script.v1.RunRequest.Chunk.content_type', index=2,
+      name='content_type', full_name='syncano.codebox.script.v1.RunChunk.content_type', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='data', full_name='syncano.codebox.script.v1.RunRequest.Chunk.data', index=3,
+      name='data', full_name='syncano.codebox.script.v1.RunChunk.data', index=3,
       number=4, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='type', full_name='syncano.codebox.script.v1.RunRequest.Chunk.type', index=4,
+      name='type', full_name='syncano.codebox.script.v1.RunChunk.type', index=4,
       number=5, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -237,7 +238,7 @@ _RUNREQUEST_CHUNK = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _RUNREQUEST_CHUNK_TYPE,
+    _RUNCHUNK_TYPE,
   ],
   serialized_options=None,
   is_extendable=False,
@@ -245,9 +246,10 @@ _RUNREQUEST_CHUNK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=525,
-  serialized_end=695,
+  serialized_start=383,
+  serialized_end=548,
 )
+
 
 _RUNREQUEST = _descriptor.Descriptor(
   name='RunRequest',
@@ -273,7 +275,7 @@ _RUNREQUEST = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_RUNREQUEST_META, _RUNREQUEST_CHUNK, ],
+  nested_types=[],
   enum_types=[
   ],
   serialized_options=None,
@@ -285,8 +287,8 @@ _RUNREQUEST = _descriptor.Descriptor(
       name='value', full_name='syncano.codebox.script.v1.RunRequest.value',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=70,
-  serialized_end=704,
+  serialized_start=550,
+  serialized_end=677,
 )
 
 
@@ -323,8 +325,8 @@ _HTTPRESPONSE_HEADERSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=854,
-  serialized_end=900,
+  serialized_start=827,
+  serialized_end=873,
 )
 
 _HTTPRESPONSE = _descriptor.Descriptor(
@@ -374,8 +376,8 @@ _HTTPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=707,
-  serialized_end=900,
+  serialized_start=680,
+  serialized_end=873,
 )
 
 
@@ -461,18 +463,16 @@ _RUNRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=903,
-  serialized_end=1103,
+  serialized_start=876,
+  serialized_end=1076,
 )
 
-_RUNREQUEST_META_OPTIONS.containing_type = _RUNREQUEST_META
-_RUNREQUEST_META.fields_by_name['options'].message_type = _RUNREQUEST_META_OPTIONS
-_RUNREQUEST_META.containing_type = _RUNREQUEST
-_RUNREQUEST_CHUNK.fields_by_name['type'].enum_type = _RUNREQUEST_CHUNK_TYPE
-_RUNREQUEST_CHUNK.containing_type = _RUNREQUEST
-_RUNREQUEST_CHUNK_TYPE.containing_type = _RUNREQUEST_CHUNK
-_RUNREQUEST.fields_by_name['meta'].message_type = _RUNREQUEST_META
-_RUNREQUEST.fields_by_name['chunk'].message_type = _RUNREQUEST_CHUNK
+_RUNMETA_OPTIONS.containing_type = _RUNMETA
+_RUNMETA.fields_by_name['options'].message_type = _RUNMETA_OPTIONS
+_RUNCHUNK.fields_by_name['type'].enum_type = _RUNCHUNK_TYPE
+_RUNCHUNK_TYPE.containing_type = _RUNCHUNK
+_RUNREQUEST.fields_by_name['meta'].message_type = _RUNMETA
+_RUNREQUEST.fields_by_name['chunk'].message_type = _RUNCHUNK
 _RUNREQUEST.oneofs_by_name['value'].fields.append(
   _RUNREQUEST.fields_by_name['meta'])
 _RUNREQUEST.fields_by_name['meta'].containing_oneof = _RUNREQUEST.oneofs_by_name['value']
@@ -482,41 +482,41 @@ _RUNREQUEST.fields_by_name['chunk'].containing_oneof = _RUNREQUEST.oneofs_by_nam
 _HTTPRESPONSE_HEADERSENTRY.containing_type = _HTTPRESPONSE
 _HTTPRESPONSE.fields_by_name['headers'].message_type = _HTTPRESPONSE_HEADERSENTRY
 _RUNRESPONSE.fields_by_name['response'].message_type = _HTTPRESPONSE
+DESCRIPTOR.message_types_by_name['RunMeta'] = _RUNMETA
+DESCRIPTOR.message_types_by_name['RunChunk'] = _RUNCHUNK
 DESCRIPTOR.message_types_by_name['RunRequest'] = _RUNREQUEST
 DESCRIPTOR.message_types_by_name['HTTPResponse'] = _HTTPRESPONSE
 DESCRIPTOR.message_types_by_name['RunResponse'] = _RUNRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
+RunMeta = _reflection.GeneratedProtocolMessageType('RunMeta', (_message.Message,), {
+
+  'Options' : _reflection.GeneratedProtocolMessageType('Options', (_message.Message,), {
+    'DESCRIPTOR' : _RUNMETA_OPTIONS,
+    '__module__' : 'syncano.codebox.script.v1.script_pb2'
+    # @@protoc_insertion_point(class_scope:syncano.codebox.script.v1.RunMeta.Options)
+    })
+  ,
+  'DESCRIPTOR' : _RUNMETA,
+  '__module__' : 'syncano.codebox.script.v1.script_pb2'
+  # @@protoc_insertion_point(class_scope:syncano.codebox.script.v1.RunMeta)
+  })
+_sym_db.RegisterMessage(RunMeta)
+_sym_db.RegisterMessage(RunMeta.Options)
+
+RunChunk = _reflection.GeneratedProtocolMessageType('RunChunk', (_message.Message,), {
+  'DESCRIPTOR' : _RUNCHUNK,
+  '__module__' : 'syncano.codebox.script.v1.script_pb2'
+  # @@protoc_insertion_point(class_scope:syncano.codebox.script.v1.RunChunk)
+  })
+_sym_db.RegisterMessage(RunChunk)
+
 RunRequest = _reflection.GeneratedProtocolMessageType('RunRequest', (_message.Message,), {
-
-  'Meta' : _reflection.GeneratedProtocolMessageType('Meta', (_message.Message,), {
-
-    'Options' : _reflection.GeneratedProtocolMessageType('Options', (_message.Message,), {
-      'DESCRIPTOR' : _RUNREQUEST_META_OPTIONS,
-      '__module__' : 'syncano.codebox.script.v1.script_pb2'
-      # @@protoc_insertion_point(class_scope:syncano.codebox.script.v1.RunRequest.Meta.Options)
-      })
-    ,
-    'DESCRIPTOR' : _RUNREQUEST_META,
-    '__module__' : 'syncano.codebox.script.v1.script_pb2'
-    # @@protoc_insertion_point(class_scope:syncano.codebox.script.v1.RunRequest.Meta)
-    })
-  ,
-
-  'Chunk' : _reflection.GeneratedProtocolMessageType('Chunk', (_message.Message,), {
-    'DESCRIPTOR' : _RUNREQUEST_CHUNK,
-    '__module__' : 'syncano.codebox.script.v1.script_pb2'
-    # @@protoc_insertion_point(class_scope:syncano.codebox.script.v1.RunRequest.Chunk)
-    })
-  ,
   'DESCRIPTOR' : _RUNREQUEST,
   '__module__' : 'syncano.codebox.script.v1.script_pb2'
   # @@protoc_insertion_point(class_scope:syncano.codebox.script.v1.RunRequest)
   })
 _sym_db.RegisterMessage(RunRequest)
-_sym_db.RegisterMessage(RunRequest.Meta)
-_sym_db.RegisterMessage(RunRequest.Meta.Options)
-_sym_db.RegisterMessage(RunRequest.Chunk)
 
 HTTPResponse = _reflection.GeneratedProtocolMessageType('HTTPResponse', (_message.Message,), {
 
@@ -550,8 +550,8 @@ _SCRIPTRUNNER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1105,
-  serialized_end=1209,
+  serialized_start=1078,
+  serialized_end=1182,
   methods=[
   _descriptor.MethodDescriptor(
     name='Run',

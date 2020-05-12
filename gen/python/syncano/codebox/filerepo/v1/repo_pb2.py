@@ -18,7 +18,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='syncano.codebox.filerepo.v1',
   syntax='proto3',
   serialized_options=b'ZJgithub.com/Syncano/syncanoapis/gen/go/syncano/codebox/filerepo/v1;filerepo',
-  serialized_pb=b'\n&syncano/codebox/filerepo/v1/repo.proto\x12\x1bsyncano.codebox.filerepo.v1\"\x1c\n\rExistsRequest\x12\x0b\n\x03key\x18\x01 \x01(\t\"\x1c\n\x0e\x45xistsResponse\x12\n\n\x02ok\x18\x01 \x01(\x08\"\x82\x02\n\rUploadRequest\x12\x46\n\x04meta\x18\x01 \x01(\x0b\x32\x36.syncano.codebox.filerepo.v1.UploadRequest.MetaMessageH\x00\x12H\n\x05\x63hunk\x18\x02 \x01(\x0b\x32\x37.syncano.codebox.filerepo.v1.UploadRequest.ChunkMessageH\x00\x12\x0e\n\x04\x64one\x18\x03 \x01(\x08H\x00\x1a\x1a\n\x0bMetaMessage\x12\x0b\n\x03key\x18\x01 \x01(\t\x1a*\n\x0c\x43hunkMessage\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\x42\x07\n\x05value\"\"\n\x0eUploadResponse\x12\x10\n\x08\x61\x63\x63\x65pted\x18\x01 \x01(\x08\x32\xd0\x01\n\x04Repo\x12\x61\n\x06\x45xists\x12*.syncano.codebox.filerepo.v1.ExistsRequest\x1a+.syncano.codebox.filerepo.v1.ExistsResponse\x12\x65\n\x06Upload\x12*.syncano.codebox.filerepo.v1.UploadRequest\x1a+.syncano.codebox.filerepo.v1.UploadResponse(\x01\x30\x01\x42LZJgithub.com/Syncano/syncanoapis/gen/go/syncano/codebox/filerepo/v1;filerepob\x06proto3'
+  serialized_pb=b'\n&syncano/codebox/filerepo/v1/repo.proto\x12\x1bsyncano.codebox.filerepo.v1\"\x1c\n\rExistsRequest\x12\x0b\n\x03key\x18\x01 \x01(\t\"\x1c\n\x0e\x45xistsResponse\x12\n\n\x02ok\x18\x01 \x01(\x08\" \n\x11UploadMetaMessage\x12\x0b\n\x03key\x18\x01 \x01(\t\"0\n\x12UploadChunkMessage\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\"\xaa\x01\n\rUploadRequest\x12>\n\x04meta\x18\x01 \x01(\x0b\x32..syncano.codebox.filerepo.v1.UploadMetaMessageH\x00\x12@\n\x05\x63hunk\x18\x02 \x01(\x0b\x32/.syncano.codebox.filerepo.v1.UploadChunkMessageH\x00\x12\x0e\n\x04\x64one\x18\x03 \x01(\x08H\x00\x42\x07\n\x05value\"\"\n\x0eUploadResponse\x12\x10\n\x08\x61\x63\x63\x65pted\x18\x01 \x01(\x08\x32\xd0\x01\n\x04Repo\x12\x61\n\x06\x45xists\x12*.syncano.codebox.filerepo.v1.ExistsRequest\x1a+.syncano.codebox.filerepo.v1.ExistsResponse\x12\x65\n\x06Upload\x12*.syncano.codebox.filerepo.v1.UploadRequest\x1a+.syncano.codebox.filerepo.v1.UploadResponse(\x01\x30\x01\x42LZJgithub.com/Syncano/syncanoapis/gen/go/syncano/codebox/filerepo/v1;filerepob\x06proto3'
 )
 
 
@@ -86,15 +86,15 @@ _EXISTSRESPONSE = _descriptor.Descriptor(
 )
 
 
-_UPLOADREQUEST_METAMESSAGE = _descriptor.Descriptor(
-  name='MetaMessage',
-  full_name='syncano.codebox.filerepo.v1.UploadRequest.MetaMessage',
+_UPLOADMETAMESSAGE = _descriptor.Descriptor(
+  name='UploadMetaMessage',
+  full_name='syncano.codebox.filerepo.v1.UploadMetaMessage',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='syncano.codebox.filerepo.v1.UploadRequest.MetaMessage.key', index=0,
+      name='key', full_name='syncano.codebox.filerepo.v1.UploadMetaMessage.key', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -112,26 +112,27 @@ _UPLOADREQUEST_METAMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=311,
-  serialized_end=337,
+  serialized_start=131,
+  serialized_end=163,
 )
 
-_UPLOADREQUEST_CHUNKMESSAGE = _descriptor.Descriptor(
-  name='ChunkMessage',
-  full_name='syncano.codebox.filerepo.v1.UploadRequest.ChunkMessage',
+
+_UPLOADCHUNKMESSAGE = _descriptor.Descriptor(
+  name='UploadChunkMessage',
+  full_name='syncano.codebox.filerepo.v1.UploadChunkMessage',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='syncano.codebox.filerepo.v1.UploadRequest.ChunkMessage.name', index=0,
+      name='name', full_name='syncano.codebox.filerepo.v1.UploadChunkMessage.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='data', full_name='syncano.codebox.filerepo.v1.UploadRequest.ChunkMessage.data', index=1,
+      name='data', full_name='syncano.codebox.filerepo.v1.UploadChunkMessage.data', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
@@ -149,9 +150,10 @@ _UPLOADREQUEST_CHUNKMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=339,
-  serialized_end=381,
+  serialized_start=165,
+  serialized_end=213,
 )
+
 
 _UPLOADREQUEST = _descriptor.Descriptor(
   name='UploadRequest',
@@ -184,7 +186,7 @@ _UPLOADREQUEST = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_UPLOADREQUEST_METAMESSAGE, _UPLOADREQUEST_CHUNKMESSAGE, ],
+  nested_types=[],
   enum_types=[
   ],
   serialized_options=None,
@@ -196,8 +198,8 @@ _UPLOADREQUEST = _descriptor.Descriptor(
       name='value', full_name='syncano.codebox.filerepo.v1.UploadRequest.value',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=132,
-  serialized_end=390,
+  serialized_start=216,
+  serialized_end=386,
 )
 
 
@@ -227,14 +229,12 @@ _UPLOADRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=392,
-  serialized_end=426,
+  serialized_start=388,
+  serialized_end=422,
 )
 
-_UPLOADREQUEST_METAMESSAGE.containing_type = _UPLOADREQUEST
-_UPLOADREQUEST_CHUNKMESSAGE.containing_type = _UPLOADREQUEST
-_UPLOADREQUEST.fields_by_name['meta'].message_type = _UPLOADREQUEST_METAMESSAGE
-_UPLOADREQUEST.fields_by_name['chunk'].message_type = _UPLOADREQUEST_CHUNKMESSAGE
+_UPLOADREQUEST.fields_by_name['meta'].message_type = _UPLOADMETAMESSAGE
+_UPLOADREQUEST.fields_by_name['chunk'].message_type = _UPLOADCHUNKMESSAGE
 _UPLOADREQUEST.oneofs_by_name['value'].fields.append(
   _UPLOADREQUEST.fields_by_name['meta'])
 _UPLOADREQUEST.fields_by_name['meta'].containing_oneof = _UPLOADREQUEST.oneofs_by_name['value']
@@ -246,6 +246,8 @@ _UPLOADREQUEST.oneofs_by_name['value'].fields.append(
 _UPLOADREQUEST.fields_by_name['done'].containing_oneof = _UPLOADREQUEST.oneofs_by_name['value']
 DESCRIPTOR.message_types_by_name['ExistsRequest'] = _EXISTSREQUEST
 DESCRIPTOR.message_types_by_name['ExistsResponse'] = _EXISTSRESPONSE
+DESCRIPTOR.message_types_by_name['UploadMetaMessage'] = _UPLOADMETAMESSAGE
+DESCRIPTOR.message_types_by_name['UploadChunkMessage'] = _UPLOADCHUNKMESSAGE
 DESCRIPTOR.message_types_by_name['UploadRequest'] = _UPLOADREQUEST
 DESCRIPTOR.message_types_by_name['UploadResponse'] = _UPLOADRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -264,28 +266,26 @@ ExistsResponse = _reflection.GeneratedProtocolMessageType('ExistsResponse', (_me
   })
 _sym_db.RegisterMessage(ExistsResponse)
 
+UploadMetaMessage = _reflection.GeneratedProtocolMessageType('UploadMetaMessage', (_message.Message,), {
+  'DESCRIPTOR' : _UPLOADMETAMESSAGE,
+  '__module__' : 'syncano.codebox.filerepo.v1.repo_pb2'
+  # @@protoc_insertion_point(class_scope:syncano.codebox.filerepo.v1.UploadMetaMessage)
+  })
+_sym_db.RegisterMessage(UploadMetaMessage)
+
+UploadChunkMessage = _reflection.GeneratedProtocolMessageType('UploadChunkMessage', (_message.Message,), {
+  'DESCRIPTOR' : _UPLOADCHUNKMESSAGE,
+  '__module__' : 'syncano.codebox.filerepo.v1.repo_pb2'
+  # @@protoc_insertion_point(class_scope:syncano.codebox.filerepo.v1.UploadChunkMessage)
+  })
+_sym_db.RegisterMessage(UploadChunkMessage)
+
 UploadRequest = _reflection.GeneratedProtocolMessageType('UploadRequest', (_message.Message,), {
-
-  'MetaMessage' : _reflection.GeneratedProtocolMessageType('MetaMessage', (_message.Message,), {
-    'DESCRIPTOR' : _UPLOADREQUEST_METAMESSAGE,
-    '__module__' : 'syncano.codebox.filerepo.v1.repo_pb2'
-    # @@protoc_insertion_point(class_scope:syncano.codebox.filerepo.v1.UploadRequest.MetaMessage)
-    })
-  ,
-
-  'ChunkMessage' : _reflection.GeneratedProtocolMessageType('ChunkMessage', (_message.Message,), {
-    'DESCRIPTOR' : _UPLOADREQUEST_CHUNKMESSAGE,
-    '__module__' : 'syncano.codebox.filerepo.v1.repo_pb2'
-    # @@protoc_insertion_point(class_scope:syncano.codebox.filerepo.v1.UploadRequest.ChunkMessage)
-    })
-  ,
   'DESCRIPTOR' : _UPLOADREQUEST,
   '__module__' : 'syncano.codebox.filerepo.v1.repo_pb2'
   # @@protoc_insertion_point(class_scope:syncano.codebox.filerepo.v1.UploadRequest)
   })
 _sym_db.RegisterMessage(UploadRequest)
-_sym_db.RegisterMessage(UploadRequest.MetaMessage)
-_sym_db.RegisterMessage(UploadRequest.ChunkMessage)
 
 UploadResponse = _reflection.GeneratedProtocolMessageType('UploadResponse', (_message.Message,), {
   'DESCRIPTOR' : _UPLOADRESPONSE,
@@ -303,8 +303,8 @@ _REPO = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=429,
-  serialized_end=637,
+  serialized_start=425,
+  serialized_end=633,
   methods=[
   _descriptor.MethodDescriptor(
     name='Exists',

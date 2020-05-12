@@ -7,46 +7,47 @@ service ScriptRunner {
   rpc Run (stream RunRequest) returns (stream RunResponse);
 }
 
+// Meta message specifies fields to describe what is being run.
+message RunMeta {
+  string request_id = 1; // Unique request ID.
+  string runtime = 2; // Runtime name.
+  string source_hash = 3; // Unique hash describing script sources.
+  string user_id = 4; // Unique key relevant for user context.
+
+  message Options {
+    string entrypoint = 1; // If empty, uses default entrypoint for specified runtime.
+    uint32 output_limit = 2; // If 0, will not hijack any output.
+    int64 timeout = 3; // Timeout is meant to be in milliseconds. If 0 takes a default 30s value.
+    uint32 mcpu = 4; // MCPU is CPU constaints in milliseconds. If 0 takes a default 250 value.
+    uint32 async = 5; // Async defines if async connections should be used. Disabled by default.
+
+    // Empty args, config, meta are acceptable.
+    bytes args = 6;
+    bytes config = 7;
+    bytes meta = 8;
+  }
+  Options options = 5;
+  string environment = 6; // Optional unique string describing script environment file.
+}
+
+message RunChunk {
+  string name = 1;
+  string filename = 2;
+  string content_type = 3;
+  bytes data = 4;
+
+  enum Type {
+    GENERIC = 0;
+    ARGS = 1;
+  }
+  Type type = 5;
+}
+
 // RunRequest represents a Meta message and optionally repeated Chunk message.
 message RunRequest {
-  // Meta message specifies fields to describe what is being run.
-  message Meta {
-    string request_id = 1; // Unique request ID.
-    string runtime = 2; // Runtime name.
-    string source_hash = 3; // Unique hash describing script sources.
-    string user_id = 4; // Unique key relevant for user context.
-
-    message Options {
-      string entrypoint = 1; // If empty, uses default entrypoint for specified runtime.
-      uint32 output_limit = 2; // If 0, will not hijack any output.
-      int64 timeout = 3; // Timeout is meant to be in milliseconds. If 0 takes a default 30s value.
-      uint32 mcpu = 4; // MCPU is CPU constaints in milliseconds. If 0 takes a default 250 value.
-      uint32 async = 5; // Async defines if async connections should be used. Disabled by default.
-
-      // Empty args, config, meta are acceptable.
-      bytes args = 6;
-      bytes config = 7;
-      bytes meta = 8;
-    }
-    Options options = 5;
-    string environment = 6; // Optional unique string describing script environment file.
-  }
-  message Chunk {
-    string name = 1;
-    string filename = 2;
-    string content_type = 3;
-    bytes data = 4;
-
-    enum Type {
-      GENERIC = 0;
-      ARGS = 1;
-    }
-    Type type = 5;
-  }
-
   oneof value {
-    Meta meta = 1;
-    Chunk chunk = 2;
+    RunMeta meta = 1;
+    RunChunk chunk = 2;
   }
 }
 

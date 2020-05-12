@@ -9,18 +9,18 @@ service ScriptRunner {
   rpc Run (stream RunRequest) returns (stream script.v1.RunResponse);
 }
 
+// Meta message specifies fields to describe what is being run.
+message RunMeta {
+  string concurrency_key = 1; // Key on which concurrency limiting will take place.
+  int32 concurrency_limit = 2; // Max concurrency allowed for key.
+}
+
 // RunRequest represents either a Meta message or a Chunk message.
 // It should always consist of exactly 1 Meta, 1 Script Meta and optionally repeated Chunk messages.
 message RunRequest {
-  // Meta message specifies fields to describe what is being run.
-  message Meta {
-    string concurrency_key = 1; // Key on which concurrency limiting will take place.
-    int32 concurrency_limit = 2; // Max concurrency allowed for key.
-  }
-
   oneof value {
-    Meta meta = 1;
-    script.v1.RunRequest.Meta script_meta = 2;
-    script.v1.RunRequest.Chunk script_chunk = 3;
+    RunMeta meta = 1;
+    script.v1.RunMeta script_meta = 2;
+    script.v1.RunChunk script_chunk = 3;
   }
 }

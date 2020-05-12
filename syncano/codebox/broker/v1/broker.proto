@@ -13,28 +13,28 @@ service ScriptRunner {
   rpc SimpleRun (SimpleRunRequest) returns (stream script.v1.RunResponse);
 }
 
+// Meta message specifies fields to describe what is being run.
+message RunMeta {
+  map<string, string> files = 1; // Map of script file URL->Name.
+  string environment_url = 2; // Environment file URL.
+  bytes trace = 3;
+  uint64 trace_id = 4;
+  bool sync = 5;
+}
+
 // RunRequest represents either a Meta message, LB Meta or a Chunk message.
 // It should always consist of exactly 1 Meta, 1 LB Meta, 1 Script Meta and optionally repeated Script Chunk messages.
 message RunRequest {
-  // Meta message specifies fields to describe what is being run.
-  message Meta {
-    map<string, string> files = 1; // Map of script file URL->Name.
-    string environment_url = 2; // Environment file URL.
-    bytes trace = 3;
-    uint64 trace_id = 4;
-    bool sync = 5;
-  }
-
   oneof value {
-    Meta meta = 1;
-    lb.v1.RunRequest.Meta lb_meta = 2;
-    script.v1.RunRequest.Meta script_meta = 3;
-    script.v1.RunRequest.Chunk script_chunk = 4;
+    RunMeta meta = 1;
+    lb.v1.RunMeta lb_meta = 2;
+    script.v1.RunMeta script_meta = 3;
+    script.v1.RunChunk script_chunk = 4;
   }
 }
 
 message SimpleRunRequest {
-  RunRequest.Meta meta = 1;
-  lb.v1.RunRequest.Meta lb_meta = 2;
-  script.v1.RunRequest.Meta script_meta = 3;
+  RunMeta meta = 1;
+  lb.v1.RunMeta lb_meta = 2;
+  script.v1.RunMeta script_meta = 3;
 }
