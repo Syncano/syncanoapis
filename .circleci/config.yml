@@ -13,6 +13,21 @@ commands:
             PB_REL="https://github.com/protocolbuffers/protobuf/releases"
             curl -LO $PB_REL/download/v<< parameters.version >>/protoc-<< parameters.version >>-linux-x86_64.zip
             unzip protoc-<< parameters.version >>-linux-x86_64.zip -d $HOME/.local
+  protoc_gen_go_install:
+    parameters:
+      version:
+        type: string
+        default: "1.23.0"
+    steps:
+      - run:
+          name: Install protoc
+          command: |
+            mkdir delete-me
+            cd delete-me
+            go mod init test
+            go get github.com/golang/protobuf/protoc-gen-go@v<< parameters.version >>
+            cd ..
+            rm -rf delete-me
   verify_clean:
     steps:
       - run:
@@ -44,6 +59,7 @@ jobs:
       - checkout
 
       - protoc_install
+      - protoc_gen_go_install
       - run:
           name: Generate contract from proto
           command: |
@@ -53,7 +69,7 @@ jobs:
 
   buf-lint:
     docker:
-      - image: bufbuild/buf:0.11.0
+      - image: bufbuild/buf:0.12.0
     steps:
       - checkout
 
