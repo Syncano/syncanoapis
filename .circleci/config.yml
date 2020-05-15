@@ -17,10 +17,10 @@ commands:
     parameters:
       version:
         type: string
-        default: "1.23.0"
+        default: "1.4.2"
     steps:
       - run:
-          name: Install protoc
+          name: Install protoc gen go
           command: |
             mkdir delete-me
             cd delete-me
