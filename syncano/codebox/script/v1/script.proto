@@ -9,11 +9,6 @@ service ScriptRunner {
 
 // Meta message specifies fields to describe what is being run.
 message RunMeta {
-  string request_id = 1; // Unique request ID.
-  string runtime = 2; // Runtime name.
-  string source_hash = 3; // Unique hash describing script sources.
-  string user_id = 4; // Unique key relevant for user context.
-
   message Options {
     string entrypoint = 1; // If empty, uses default entrypoint for specified runtime.
     uint32 output_limit = 2; // If 0, will not hijack any output.
@@ -26,8 +21,12 @@ message RunMeta {
     bytes config = 7;
     bytes meta = 8;
   }
-  Options options = 5;
-  string environment = 6; // Optional unique string describing script environment file.
+
+  Options options = 1;
+  string runtime = 2; // Runtime name.
+  string source_hash = 3; // Unique hash describing script sources.
+  string user_id = 4; // Unique key relevant for user context.
+  string environment = 5; // Optional unique string describing script environment file.
 }
 
 message RunChunk {
