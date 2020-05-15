@@ -47,8 +47,7 @@ jobs:
       - run:
           name: Generate contract from proto
           command: |
-            go get github.com/golang/protobuf/protoc-gen-go
-
+            go mod download
             make proto-go
       - verify_clean
 
