@@ -30,3 +30,6 @@ proto-python: ## Run protobuf compiler on all .proto files for python
 	done
 
 proto: proto-python proto-go ## Run protobuf compiler on all .proto files for both python and go
+
+lint: require-buf ## Run buf lint on proto files
+	buf check lint
