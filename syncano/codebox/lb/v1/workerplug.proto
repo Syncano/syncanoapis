@@ -22,6 +22,9 @@ message ContainerRemovedRequest {
   string source_hash = 3;
   string environment = 4;
   string user_id = 5;
+  string entrypoint = 6;
+  uint32 mcpu = 7;
+  uint32 async = 8;
 }
 message ContainerRemovedResponse {}
 
