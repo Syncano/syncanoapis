@@ -19,12 +19,13 @@ service WorkerPlug {
 message ContainerRemovedRequest {
   string id = 1;
   string container_id = 2;
-  string source_hash = 3;
-  string environment = 4;
-  string user_id = 5;
-  string entrypoint = 6;
-  uint32 mcpu = 7;
-  uint32 async = 8;
+  string runtime = 3;
+  string source_hash = 4;
+  string environment = 5;
+  string user_id = 6;
+  string entrypoint = 7;
+  uint32 mcpu = 8;
+  uint32 async = 9;
 }
 message ContainerRemovedResponse {}
 
