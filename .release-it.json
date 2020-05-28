@@ -6,6 +6,6 @@
     "publish": false
   },
   "git": {
-    "tagName": "gen/v${version}"
+    "tagName": "v${version}"
   }
 }
