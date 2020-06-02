@@ -5,7 +5,7 @@ commands:
     parameters:
       version:
         type: string
-        default: "3.12.1"
+        default: "3.12.2"
     steps:
       - run:
           name: Install protoc
@@ -33,7 +33,7 @@ commands:
       - run:
           name: Verify if all files are clean
           command: |
-            git diff --exit-code
+            git diff -G'^[^\/]' --exit-code
 
 
 jobs:

@@ -7,6 +7,8 @@ import "syncano/codebox/script/v1/script.proto";
 service ScriptRunner {
   // Run runs script in secure environment of worker.
   rpc Run (stream RunRequest) returns (stream script.v1.RunResponse);
+  // Delete deletes all containers for specified script index.
+  rpc Delete (script.v1.DeleteRequest) returns (script.v1.DeleteResponse);
 }
 
 // Meta message specifies fields to describe what is being run.

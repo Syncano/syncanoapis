@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='syncano.codebox.broker.v1',
   syntax='proto3',
   serialized_options=b'ZFgithub.com/Syncano/syncanoapis/gen/go/syncano/codebox/broker/v1;broker',
-  serialized_pb=b'\n&syncano/codebox/broker/v1/broker.proto\x12\x19syncano.codebox.broker.v1\x1a\"syncano/codebox/lb/v1/runner.proto\x1a&syncano/codebox/script/v1/script.proto\"\xbd\x01\n\x07RunMeta\x12<\n\x05\x66iles\x18\x01 \x03(\x0b\x32-.syncano.codebox.broker.v1.RunMeta.FilesEntry\x12\x17\n\x0f\x65nvironment_url\x18\x02 \x01(\t\x12\r\n\x05trace\x18\x03 \x01(\x0c\x12\x10\n\x08trace_id\x18\x04 \x01(\x04\x12\x0c\n\x04sync\x18\x05 \x01(\x08\x1a,\n\nFilesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xf4\x01\n\nRunRequest\x12\x32\n\x04meta\x18\x01 \x01(\x0b\x32\".syncano.codebox.broker.v1.RunMetaH\x00\x12\x31\n\x07lb_meta\x18\x02 \x01(\x0b\x32\x1e.syncano.codebox.lb.v1.RunMetaH\x00\x12\x39\n\x0bscript_meta\x18\x03 \x01(\x0b\x32\".syncano.codebox.script.v1.RunMetaH\x00\x12;\n\x0cscript_chunk\x18\x04 \x01(\x0b\x32#.syncano.codebox.script.v1.RunChunkH\x00\x42\x07\n\x05value\"\xae\x01\n\x10SimpleRunRequest\x12\x30\n\x04meta\x18\x01 \x01(\x0b\x32\".syncano.codebox.broker.v1.RunMeta\x12/\n\x07lb_meta\x18\x02 \x01(\x0b\x32\x1e.syncano.codebox.lb.v1.RunMeta\x12\x37\n\x0bscript_meta\x18\x03 \x01(\x0b\x32\".syncano.codebox.script.v1.RunMeta2\xcc\x01\n\x0cScriptRunner\x12X\n\x03Run\x12%.syncano.codebox.broker.v1.RunRequest\x1a&.syncano.codebox.script.v1.RunResponse(\x01\x30\x01\x12\x62\n\tSimpleRun\x12+.syncano.codebox.broker.v1.SimpleRunRequest\x1a&.syncano.codebox.script.v1.RunResponse0\x01\x42HZFgithub.com/Syncano/syncanoapis/gen/go/syncano/codebox/broker/v1;brokerb\x06proto3'
+  serialized_pb=b'\n&syncano/codebox/broker/v1/broker.proto\x12\x19syncano.codebox.broker.v1\x1a\"syncano/codebox/lb/v1/runner.proto\x1a&syncano/codebox/script/v1/script.proto\"\xbd\x01\n\x07RunMeta\x12<\n\x05\x66iles\x18\x01 \x03(\x0b\x32-.syncano.codebox.broker.v1.RunMeta.FilesEntry\x12\x17\n\x0f\x65nvironment_url\x18\x02 \x01(\t\x12\r\n\x05trace\x18\x03 \x01(\x0c\x12\x10\n\x08trace_id\x18\x04 \x01(\x04\x12\x0c\n\x04sync\x18\x05 \x01(\x08\x1a,\n\nFilesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xf4\x01\n\nRunRequest\x12\x32\n\x04meta\x18\x01 \x01(\x0b\x32\".syncano.codebox.broker.v1.RunMetaH\x00\x12\x31\n\x07lb_meta\x18\x02 \x01(\x0b\x32\x1e.syncano.codebox.lb.v1.RunMetaH\x00\x12\x39\n\x0bscript_meta\x18\x03 \x01(\x0b\x32\".syncano.codebox.script.v1.RunMetaH\x00\x12;\n\x0cscript_chunk\x18\x04 \x01(\x0b\x32#.syncano.codebox.script.v1.RunChunkH\x00\x42\x07\n\x05value\"\xae\x01\n\x10SimpleRunRequest\x12\x30\n\x04meta\x18\x01 \x01(\x0b\x32\".syncano.codebox.broker.v1.RunMeta\x12/\n\x07lb_meta\x18\x02 \x01(\x0b\x32\x1e.syncano.codebox.lb.v1.RunMeta\x12\x37\n\x0bscript_meta\x18\x03 \x01(\x0b\x32\".syncano.codebox.script.v1.RunMeta2\xab\x02\n\x0cScriptRunner\x12X\n\x03Run\x12%.syncano.codebox.broker.v1.RunRequest\x1a&.syncano.codebox.script.v1.RunResponse(\x01\x30\x01\x12\x62\n\tSimpleRun\x12+.syncano.codebox.broker.v1.SimpleRunRequest\x1a&.syncano.codebox.script.v1.RunResponse0\x01\x12]\n\x06\x44\x65lete\x12(.syncano.codebox.script.v1.DeleteRequest\x1a).syncano.codebox.script.v1.DeleteResponseBHZFgithub.com/Syncano/syncanoapis/gen/go/syncano/codebox/broker/v1;brokerb\x06proto3'
   ,
   dependencies=[syncano_dot_codebox_dot_lb_dot_v1_dot_runner__pb2.DESCRIPTOR,syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.DESCRIPTOR,])
 
@@ -288,7 +288,7 @@ _SCRIPTRUNNER = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   serialized_start=762,
-  serialized_end=966,
+  serialized_end=1061,
   methods=[
   _descriptor.MethodDescriptor(
     name='Run',
@@ -306,6 +306,15 @@ _SCRIPTRUNNER = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_SIMPLERUNREQUEST,
     output_type=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2._RUNRESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='Delete',
+    full_name='syncano.codebox.broker.v1.ScriptRunner.Delete',
+    index=2,
+    containing_service=None,
+    input_type=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2._DELETEREQUEST,
+    output_type=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2._DELETERESPONSE,
     serialized_options=None,
   ),
 ])

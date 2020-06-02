@@ -18,6 +18,11 @@ class ScriptRunnerStub(object):
                 request_serializer=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.RunRequest.SerializeToString,
                 response_deserializer=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.RunResponse.FromString,
                 )
+        self.Delete = channel.unary_unary(
+                '/syncano.codebox.script.v1.ScriptRunner/Delete',
+                request_serializer=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.DeleteRequest.SerializeToString,
+                response_deserializer=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.DeleteResponse.FromString,
+                )
 
 
 class ScriptRunnerServicer(object):
@@ -30,6 +35,13 @@ class ScriptRunnerServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def Delete(self, request, context):
+        """Delete deletes all containers for specified script index.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_ScriptRunnerServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -37,6 +49,11 @@ def add_ScriptRunnerServicer_to_server(servicer, server):
                     servicer.Run,
                     request_deserializer=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.RunRequest.FromString,
                     response_serializer=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.RunResponse.SerializeToString,
+            ),
+            'Delete': grpc.unary_unary_rpc_method_handler(
+                    servicer.Delete,
+                    request_deserializer=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.DeleteRequest.FromString,
+                    response_serializer=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.DeleteResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -61,5 +78,21 @@ class ScriptRunner(object):
         return grpc.experimental.stream_stream(request_iterator, target, '/syncano.codebox.script.v1.ScriptRunner/Run',
             syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.RunRequest.SerializeToString,
             syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.RunResponse.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def Delete(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/syncano.codebox.script.v1.ScriptRunner/Delete',
+            syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.DeleteRequest.SerializeToString,
+            syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.DeleteResponse.FromString,
             options, channel_credentials,
             call_credentials, compression, wait_for_ready, timeout, metadata)

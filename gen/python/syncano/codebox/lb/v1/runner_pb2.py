@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='syncano.codebox.lb.v1',
   syntax='proto3',
   serialized_options=b'Z>github.com/Syncano/syncanoapis/gen/go/syncano/codebox/lb/v1;lb',
-  serialized_pb=b'\n\"syncano/codebox/lb/v1/runner.proto\x12\x15syncano.codebox.lb.v1\x1a&syncano/codebox/script/v1/script.proto\"=\n\x07RunMeta\x12\x17\n\x0f\x63oncurrency_key\x18\x01 \x01(\t\x12\x19\n\x11\x63oncurrency_limit\x18\x02 \x01(\x05\"\xbd\x01\n\nRunRequest\x12.\n\x04meta\x18\x01 \x01(\x0b\x32\x1e.syncano.codebox.lb.v1.RunMetaH\x00\x12\x39\n\x0bscript_meta\x18\x02 \x01(\x0b\x32\".syncano.codebox.script.v1.RunMetaH\x00\x12;\n\x0cscript_chunk\x18\x03 \x01(\x0b\x32#.syncano.codebox.script.v1.RunChunkH\x00\x42\x07\n\x05value2d\n\x0cScriptRunner\x12T\n\x03Run\x12!.syncano.codebox.lb.v1.RunRequest\x1a&.syncano.codebox.script.v1.RunResponse(\x01\x30\x01\x42@Z>github.com/Syncano/syncanoapis/gen/go/syncano/codebox/lb/v1;lbb\x06proto3'
+  serialized_pb=b'\n\"syncano/codebox/lb/v1/runner.proto\x12\x15syncano.codebox.lb.v1\x1a&syncano/codebox/script/v1/script.proto\"=\n\x07RunMeta\x12\x17\n\x0f\x63oncurrency_key\x18\x01 \x01(\t\x12\x19\n\x11\x63oncurrency_limit\x18\x02 \x01(\x05\"\xbd\x01\n\nRunRequest\x12.\n\x04meta\x18\x01 \x01(\x0b\x32\x1e.syncano.codebox.lb.v1.RunMetaH\x00\x12\x39\n\x0bscript_meta\x18\x02 \x01(\x0b\x32\".syncano.codebox.script.v1.RunMetaH\x00\x12;\n\x0cscript_chunk\x18\x03 \x01(\x0b\x32#.syncano.codebox.script.v1.RunChunkH\x00\x42\x07\n\x05value2\xc3\x01\n\x0cScriptRunner\x12T\n\x03Run\x12!.syncano.codebox.lb.v1.RunRequest\x1a&.syncano.codebox.script.v1.RunResponse(\x01\x30\x01\x12]\n\x06\x44\x65lete\x12(.syncano.codebox.script.v1.DeleteRequest\x1a).syncano.codebox.script.v1.DeleteResponseB@Z>github.com/Syncano/syncanoapis/gen/go/syncano/codebox/lb/v1;lbb\x06proto3'
   ,
   dependencies=[syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.DESCRIPTOR,])
 
@@ -150,8 +150,8 @@ _SCRIPTRUNNER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=356,
-  serialized_end=456,
+  serialized_start=357,
+  serialized_end=552,
   methods=[
   _descriptor.MethodDescriptor(
     name='Run',
@@ -160,6 +160,15 @@ _SCRIPTRUNNER = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_RUNREQUEST,
     output_type=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2._RUNRESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='Delete',
+    full_name='syncano.codebox.lb.v1.ScriptRunner.Delete',
+    index=1,
+    containing_service=None,
+    input_type=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2._DELETEREQUEST,
+    output_type=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2._DELETERESPONSE,
     serialized_options=None,
   ),
 ])

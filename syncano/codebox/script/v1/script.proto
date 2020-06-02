@@ -5,6 +5,8 @@ option go_package = "github.com/Syncano/syncanoapis/gen/go/syncano/codebox/scrip
 service ScriptRunner {
   // Run runs script in secure environment of worker.
   rpc Run (stream RunRequest) returns (stream RunResponse);
+  // Delete deletes all containers for specified script index.
+  rpc Delete (DeleteRequest) returns (DeleteResponse);
 }
 
 // Meta message specifies fields to describe what is being run.
@@ -59,7 +61,6 @@ message HTTPResponse {
 }
 
 message RunResponse {
-  string container_id = 9;
   int32 code = 1;
   bytes stdout = 2;
   bytes stderr = 3;
@@ -68,4 +69,15 @@ message RunResponse {
   bool cached = 6;
   int64 time = 7;
   uint32 weight = 8;
+  string container_id = 9;
+}
+
+message DeleteRequest {
+  string runtime = 1;
+  string source_hash = 2;
+  string user_id = 3;
+}
+
+message DeleteResponse {
+  repeated string container_ids = 1;
 }
