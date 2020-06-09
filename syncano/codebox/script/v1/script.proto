@@ -76,6 +76,8 @@ message DeleteRequest {
   string runtime = 1;
   string source_hash = 2;
   string user_id = 3;
+
+  string container_id = 4;
 }
 
 message DeleteResponse {
