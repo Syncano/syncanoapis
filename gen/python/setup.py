@@ -12,6 +12,6 @@ def find_packages(path='.'):
 
 setup(
     name='syncanoapis',
-    version='0.1',
+    version='1.0.0',
     packages=list(find_packages('syncano')),
 )
