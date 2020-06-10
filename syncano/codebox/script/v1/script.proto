@@ -2,6 +2,8 @@ syntax = "proto3";
 package syncano.codebox.script.v1;
 option go_package = "github.com/Syncano/syncanoapis/gen/go/syncano/codebox/script/v1;script";
 
+import "google/protobuf/timestamp.proto";
+
 service ScriptRunner {
   // Run runs script in secure environment of worker.
   rpc Run (stream RunRequest) returns (stream RunResponse);
@@ -67,7 +69,7 @@ message RunResponse {
   HTTPResponse response = 4;
   int64 took = 5;
   bool cached = 6;
-  int64 time = 7;
+  google.protobuf.Timestamp time = 7;
   uint32 weight = 8;
   string container_id = 9;
 }

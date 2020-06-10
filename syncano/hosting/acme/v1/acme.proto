@@ -1,0 +1,69 @@
+syntax = "proto3";
+package syncano.hosting.acme.v1;
+option go_package = "github.com/Syncano/syncanoapis/gen/go/syncano/hosting/acme/v1;acme";
+
+import "google/protobuf/timestamp.proto";
+
+service AcmeHost {
+  rpc Create (CreateRequest) returns (CreateResponse);
+  rpc Delete (DeleteRequest) returns (DeleteResponse);
+  rpc Refresh (RefreshRequest) returns (RefreshResponse);
+  rpc List (ListRequest) returns (ListResponse);
+}
+
+enum Status {
+  UNKNOWN = 0;
+  OK = 1;
+  INVALID_DOMAIN = 2;
+  CNAME_NOT_SET = 3;
+  WRONG_CNAME = 4;
+}
+
+message Refresh {
+  bool auto_refresh = 1;
+  uint32 refresh_before_days = 2;
+}
+
+message Host {
+  string domain = 1;
+  Status status = 2;
+  google.protobuf.Timestamp expiration = 3;
+
+  Refresh refresh = 4;
+}
+
+message CreateRequest {
+  string domain = 1;
+  Refresh refresh = 2;
+  bool wait = 3;
+}
+
+message CreateResponse {
+  Host host = 1;
+}
+
+message DeleteRequest {
+   string domain = 1;
+}
+
+message DeleteResponse {
+}
+
+message RefreshRequest {
+  repeated string domains = 1; // optional
+  google.protobuf.Timestamp expiration_lte = 2; // optional
+}
+
+message RefreshResponse {
+  repeated Host refreshed = 1;
+  repeated Host failed = 2;
+}
+
+message ListRequest {
+  repeated string domains = 1; // optional
+  google.protobuf.Timestamp expiration_lte = 2; // optional
+}
+
+message ListResponse {
+  repeated Host hosts = 1;
+}
