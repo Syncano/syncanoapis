@@ -18,6 +18,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='syncano.codebox.lb.v1',
   syntax='proto3',
   serialized_options=b'Z>github.com/Syncano/syncanoapis/gen/go/syncano/codebox/lb/v1;lb',
+  create_key=_descriptor._internal_create_key,
   serialized_pb=b'\n&syncano/codebox/lb/v1/workerplug.proto\x12\x15syncano.codebox.lb.v1\"\xb8\x01\n\x17\x43ontainerRemovedRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x14\n\x0c\x63ontainer_id\x18\x02 \x01(\t\x12\x0f\n\x07runtime\x18\x03 \x01(\t\x12\x13\n\x0bsource_hash\x18\x04 \x01(\t\x12\x13\n\x0b\x65nvironment\x18\x05 \x01(\t\x12\x0f\n\x07user_id\x18\x06 \x01(\t\x12\x12\n\nentrypoint\x18\x07 \x01(\t\x12\x0c\n\x04mcpu\x18\x08 \x01(\r\x12\r\n\x05\x61sync\x18\t \x01(\r\"\x1a\n\x18\x43ontainerRemovedResponse\"_\n\x0fRegisterRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04port\x18\x02 \x01(\r\x12\x0c\n\x04mcpu\x18\x03 \x01(\r\x12\x0e\n\x06memory\x18\x04 \x01(\x04\x12\x14\n\x0c\x64\x65\x66\x61ult_mcpu\x18\x05 \x01(\r\"\x12\n\x10RegisterResponse\".\n\x10HeartbeatRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0e\n\x06memory\x18\x02 \x01(\x04\"\x13\n\x11HeartbeatResponse\"\x1f\n\x11\x44isconnectRequest\x12\n\n\x02id\x18\x01 \x01(\t\"\x14\n\x12\x44isconnectResponse2\xa1\x03\n\nWorkerPlug\x12s\n\x10\x43ontainerRemoved\x12..syncano.codebox.lb.v1.ContainerRemovedRequest\x1a/.syncano.codebox.lb.v1.ContainerRemovedResponse\x12[\n\x08Register\x12&.syncano.codebox.lb.v1.RegisterRequest\x1a\'.syncano.codebox.lb.v1.RegisterResponse\x12^\n\tHeartbeat\x12\'.syncano.codebox.lb.v1.HeartbeatRequest\x1a(.syncano.codebox.lb.v1.HeartbeatResponse\x12\x61\n\nDisconnect\x12(.syncano.codebox.lb.v1.DisconnectRequest\x1a).syncano.codebox.lb.v1.DisconnectResponseB@Z>github.com/Syncano/syncanoapis/gen/go/syncano/codebox/lb/v1;lbb\x06proto3'
 )
 
@@ -30,6 +31,7 @@ _CONTAINERREMOVEDREQUEST = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='syncano.codebox.lb.v1.ContainerRemovedRequest.id', index=0,
@@ -37,63 +39,63 @@ _CONTAINERREMOVEDREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='container_id', full_name='syncano.codebox.lb.v1.ContainerRemovedRequest.container_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='runtime', full_name='syncano.codebox.lb.v1.ContainerRemovedRequest.runtime', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='source_hash', full_name='syncano.codebox.lb.v1.ContainerRemovedRequest.source_hash', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='environment', full_name='syncano.codebox.lb.v1.ContainerRemovedRequest.environment', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='user_id', full_name='syncano.codebox.lb.v1.ContainerRemovedRequest.user_id', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='entrypoint', full_name='syncano.codebox.lb.v1.ContainerRemovedRequest.entrypoint', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='mcpu', full_name='syncano.codebox.lb.v1.ContainerRemovedRequest.mcpu', index=7,
       number=8, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='async', full_name='syncano.codebox.lb.v1.ContainerRemovedRequest.async', index=8,
       number=9, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -117,6 +119,7 @@ _CONTAINERREMOVEDRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
   ],
   extensions=[
@@ -141,6 +144,7 @@ _REGISTERREQUEST = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='syncano.codebox.lb.v1.RegisterRequest.id', index=0,
@@ -148,35 +152,35 @@ _REGISTERREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='port', full_name='syncano.codebox.lb.v1.RegisterRequest.port', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='mcpu', full_name='syncano.codebox.lb.v1.RegisterRequest.mcpu', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='memory', full_name='syncano.codebox.lb.v1.RegisterRequest.memory', index=3,
       number=4, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='default_mcpu', full_name='syncano.codebox.lb.v1.RegisterRequest.default_mcpu', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -200,6 +204,7 @@ _REGISTERRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
   ],
   extensions=[
@@ -224,6 +229,7 @@ _HEARTBEATREQUEST = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='syncano.codebox.lb.v1.HeartbeatRequest.id', index=0,
@@ -231,14 +237,14 @@ _HEARTBEATREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='memory', full_name='syncano.codebox.lb.v1.HeartbeatRequest.memory', index=1,
       number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -262,6 +268,7 @@ _HEARTBEATRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
   ],
   extensions=[
@@ -286,6 +293,7 @@ _DISCONNECTREQUEST = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='syncano.codebox.lb.v1.DisconnectRequest.id', index=0,
@@ -293,7 +301,7 @@ _DISCONNECTREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -317,6 +325,7 @@ _DISCONNECTRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
   ],
   extensions=[
@@ -409,6 +418,7 @@ _WORKERPLUG = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
+  create_key=_descriptor._internal_create_key,
   serialized_start=522,
   serialized_end=939,
   methods=[
@@ -420,6 +430,7 @@ _WORKERPLUG = _descriptor.ServiceDescriptor(
     input_type=_CONTAINERREMOVEDREQUEST,
     output_type=_CONTAINERREMOVEDRESPONSE,
     serialized_options=None,
+    create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='Register',
@@ -429,6 +440,7 @@ _WORKERPLUG = _descriptor.ServiceDescriptor(
     input_type=_REGISTERREQUEST,
     output_type=_REGISTERRESPONSE,
     serialized_options=None,
+    create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='Heartbeat',
@@ -438,6 +450,7 @@ _WORKERPLUG = _descriptor.ServiceDescriptor(
     input_type=_HEARTBEATREQUEST,
     output_type=_HEARTBEATRESPONSE,
     serialized_options=None,
+    create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='Disconnect',
@@ -447,6 +460,7 @@ _WORKERPLUG = _descriptor.ServiceDescriptor(
     input_type=_DISCONNECTREQUEST,
     output_type=_DISCONNECTRESPONSE,
     serialized_options=None,
+    create_key=_descriptor._internal_create_key,
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_WORKERPLUG)

@@ -20,7 +20,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='syncano.hosting.acme.v1',
   syntax='proto3',
   serialized_options=b'ZBgithub.com/Syncano/syncanoapis/gen/go/syncano/hosting/acme/v1;acme',
-  serialized_pb=b'\n\"syncano/hosting/acme/v1/acme.proto\x12\x17syncano.hosting.acme.v1\x1a\x1fgoogle/protobuf/timestamp.proto\"<\n\x07Refresh\x12\x14\n\x0c\x61uto_refresh\x18\x01 \x01(\x08\x12\x1b\n\x13refresh_before_days\x18\x02 \x01(\r\"\xaa\x01\n\x04Host\x12\x0e\n\x06\x64omain\x18\x01 \x01(\t\x12/\n\x06status\x18\x02 \x01(\x0e\x32\x1f.syncano.hosting.acme.v1.Status\x12.\n\nexpiration\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x31\n\x07refresh\x18\x04 \x01(\x0b\x32 .syncano.hosting.acme.v1.Refresh\"`\n\rCreateRequest\x12\x0e\n\x06\x64omain\x18\x01 \x01(\t\x12\x31\n\x07refresh\x18\x02 \x01(\x0b\x32 .syncano.hosting.acme.v1.Refresh\x12\x0c\n\x04wait\x18\x03 \x01(\x08\"=\n\x0e\x43reateResponse\x12+\n\x04host\x18\x01 \x01(\x0b\x32\x1d.syncano.hosting.acme.v1.Host\"\x1f\n\rDeleteRequest\x12\x0e\n\x06\x64omain\x18\x01 \x01(\t\"\x10\n\x0e\x44\x65leteResponse\"U\n\x0eRefreshRequest\x12\x0f\n\x07\x64omains\x18\x01 \x03(\t\x12\x32\n\x0e\x65xpiration_lte\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"r\n\x0fRefreshResponse\x12\x30\n\trefreshed\x18\x01 \x03(\x0b\x32\x1d.syncano.hosting.acme.v1.Host\x12-\n\x06\x66\x61iled\x18\x02 \x03(\x0b\x32\x1d.syncano.hosting.acme.v1.Host\"R\n\x0bListRequest\x12\x0f\n\x07\x64omains\x18\x01 \x03(\t\x12\x32\n\x0e\x65xpiration_lte\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"<\n\x0cListResponse\x12,\n\x05hosts\x18\x01 \x03(\x0b\x32\x1d.syncano.hosting.acme.v1.Host*U\n\x06Status\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x06\n\x02OK\x10\x01\x12\x12\n\x0eINVALID_DOMAIN\x10\x02\x12\x11\n\rCNAME_NOT_SET\x10\x03\x12\x0f\n\x0bWRONG_CNAME\x10\x04\x32\xf3\x02\n\x08\x41\x63meHost\x12Y\n\x06\x43reate\x12&.syncano.hosting.acme.v1.CreateRequest\x1a\'.syncano.hosting.acme.v1.CreateResponse\x12Y\n\x06\x44\x65lete\x12&.syncano.hosting.acme.v1.DeleteRequest\x1a\'.syncano.hosting.acme.v1.DeleteResponse\x12\\\n\x07Refresh\x12\'.syncano.hosting.acme.v1.RefreshRequest\x1a(.syncano.hosting.acme.v1.RefreshResponse\x12S\n\x04List\x12$.syncano.hosting.acme.v1.ListRequest\x1a%.syncano.hosting.acme.v1.ListResponseBDZBgithub.com/Syncano/syncanoapis/gen/go/syncano/hosting/acme/v1;acmeb\x06proto3'
+  create_key=_descriptor._internal_create_key,
+  serialized_pb=b'\n\"syncano/hosting/acme/v1/acme.proto\x12\x17syncano.hosting.acme.v1\x1a\x1fgoogle/protobuf/timestamp.proto\"<\n\x07Refresh\x12\x14\n\x0c\x61uto_refresh\x18\x01 \x01(\x08\x12\x1b\n\x13refresh_before_days\x18\x02 \x01(\r\"\xb1\x01\n\x0b\x43\x65rtificate\x12\x0e\n\x06\x64omain\x18\x01 \x01(\t\x12/\n\x06status\x18\x02 \x01(\x0e\x32\x1f.syncano.hosting.acme.v1.Status\x12.\n\nexpiration\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x31\n\x07refresh\x18\x04 \x01(\x0b\x32 .syncano.hosting.acme.v1.Refresh\"`\n\rCreateRequest\x12\x0e\n\x06\x64omain\x18\x01 \x01(\t\x12\x31\n\x07refresh\x18\x02 \x01(\x0b\x32 .syncano.hosting.acme.v1.Refresh\x12\x0c\n\x04wait\x18\x03 \x01(\x08\"K\n\x0e\x43reateResponse\x12\x39\n\x0b\x63\x65rtificate\x18\x01 \x01(\x0b\x32$.syncano.hosting.acme.v1.Certificate\"\x1f\n\rDeleteRequest\x12\x0e\n\x06\x64omain\x18\x01 \x01(\t\"\x10\n\x0e\x44\x65leteResponse\"U\n\x0eRefreshRequest\x12\x0f\n\x07\x64omains\x18\x01 \x03(\t\x12\x32\n\x0e\x65xpiration_lte\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"\x80\x01\n\x0fRefreshResponse\x12\x37\n\trefreshed\x18\x01 \x03(\x0b\x32$.syncano.hosting.acme.v1.Certificate\x12\x34\n\x06\x66\x61iled\x18\x02 \x03(\x0b\x32$.syncano.hosting.acme.v1.Certificate\"R\n\x0bListRequest\x12\x0f\n\x07\x64omains\x18\x01 \x03(\t\x12\x32\n\x0e\x65xpiration_lte\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"J\n\x0cListResponse\x12:\n\x0c\x63\x65rtificates\x18\x01 \x03(\x0b\x32$.syncano.hosting.acme.v1.Certificate*a\n\x06Status\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x06\n\x02OK\x10\x01\x12\x12\n\x0eINVALID_DOMAIN\x10\x02\x12\x1e\n\x1a\x44OMAIN_VERIFICATION_FAILED\x10\x03\x12\x0e\n\nACME_ERROR\x10\x04\x32\xf4\x02\n\tAcmeProxy\x12Y\n\x06\x43reate\x12&.syncano.hosting.acme.v1.CreateRequest\x1a\'.syncano.hosting.acme.v1.CreateResponse\x12Y\n\x06\x44\x65lete\x12&.syncano.hosting.acme.v1.DeleteRequest\x1a\'.syncano.hosting.acme.v1.DeleteResponse\x12\\\n\x07Refresh\x12\'.syncano.hosting.acme.v1.RefreshRequest\x1a(.syncano.hosting.acme.v1.RefreshResponse\x12S\n\x04List\x12$.syncano.hosting.acme.v1.ListRequest\x1a%.syncano.hosting.acme.v1.ListResponseBDZBgithub.com/Syncano/syncanoapis/gen/go/syncano/hosting/acme/v1;acmeb\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -29,32 +30,38 @@ _STATUS = _descriptor.EnumDescriptor(
   full_name='syncano.hosting.acme.v1.Status',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='UNKNOWN', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='OK', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='INVALID_DOMAIN', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='CNAME_NOT_SET', index=3, number=3,
+      name='DOMAIN_VERIFICATION_FAILED', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='WRONG_CNAME', index=4, number=4,
+      name='ACME_ERROR', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=892,
-  serialized_end=977,
+  serialized_start=942,
+  serialized_end=1039,
 )
 _sym_db.RegisterEnumDescriptor(_STATUS)
 
@@ -62,8 +69,8 @@ Status = enum_type_wrapper.EnumTypeWrapper(_STATUS)
 UNKNOWN = 0
 OK = 1
 INVALID_DOMAIN = 2
-CNAME_NOT_SET = 3
-WRONG_CNAME = 4
+DOMAIN_VERIFICATION_FAILED = 3
+ACME_ERROR = 4
 
 
 
@@ -73,6 +80,7 @@ _REFRESH = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='auto_refresh', full_name='syncano.hosting.acme.v1.Refresh.auto_refresh', index=0,
@@ -80,14 +88,14 @@ _REFRESH = _descriptor.Descriptor(
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='refresh_before_days', full_name='syncano.hosting.acme.v1.Refresh.refresh_before_days', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -105,41 +113,42 @@ _REFRESH = _descriptor.Descriptor(
 )
 
 
-_HOST = _descriptor.Descriptor(
-  name='Host',
-  full_name='syncano.hosting.acme.v1.Host',
+_CERTIFICATE = _descriptor.Descriptor(
+  name='Certificate',
+  full_name='syncano.hosting.acme.v1.Certificate',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='domain', full_name='syncano.hosting.acme.v1.Host.domain', index=0,
+      name='domain', full_name='syncano.hosting.acme.v1.Certificate.domain', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='status', full_name='syncano.hosting.acme.v1.Host.status', index=1,
+      name='status', full_name='syncano.hosting.acme.v1.Certificate.status', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='expiration', full_name='syncano.hosting.acme.v1.Host.expiration', index=2,
+      name='expiration', full_name='syncano.hosting.acme.v1.Certificate.expiration', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='refresh', full_name='syncano.hosting.acme.v1.Host.refresh', index=3,
+      name='refresh', full_name='syncano.hosting.acme.v1.Certificate.refresh', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -153,7 +162,7 @@ _HOST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=159,
-  serialized_end=329,
+  serialized_end=336,
 )
 
 
@@ -163,6 +172,7 @@ _CREATEREQUEST = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='domain', full_name='syncano.hosting.acme.v1.CreateRequest.domain', index=0,
@@ -170,21 +180,21 @@ _CREATEREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='refresh', full_name='syncano.hosting.acme.v1.CreateRequest.refresh', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='wait', full_name='syncano.hosting.acme.v1.CreateRequest.wait', index=2,
       number=3, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -197,8 +207,8 @@ _CREATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=331,
-  serialized_end=427,
+  serialized_start=338,
+  serialized_end=434,
 )
 
 
@@ -208,14 +218,15 @@ _CREATERESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='host', full_name='syncano.hosting.acme.v1.CreateResponse.host', index=0,
+      name='certificate', full_name='syncano.hosting.acme.v1.CreateResponse.certificate', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -228,8 +239,8 @@ _CREATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=429,
-  serialized_end=490,
+  serialized_start=436,
+  serialized_end=511,
 )
 
 
@@ -239,6 +250,7 @@ _DELETEREQUEST = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='domain', full_name='syncano.hosting.acme.v1.DeleteRequest.domain', index=0,
@@ -246,7 +258,7 @@ _DELETEREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -259,8 +271,8 @@ _DELETEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=492,
-  serialized_end=523,
+  serialized_start=513,
+  serialized_end=544,
 )
 
 
@@ -270,6 +282,7 @@ _DELETERESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
   ],
   extensions=[
@@ -283,8 +296,8 @@ _DELETERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=525,
-  serialized_end=541,
+  serialized_start=546,
+  serialized_end=562,
 )
 
 
@@ -294,6 +307,7 @@ _REFRESHREQUEST = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='domains', full_name='syncano.hosting.acme.v1.RefreshRequest.domains', index=0,
@@ -301,14 +315,14 @@ _REFRESHREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='expiration_lte', full_name='syncano.hosting.acme.v1.RefreshRequest.expiration_lte', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -321,8 +335,8 @@ _REFRESHREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=543,
-  serialized_end=628,
+  serialized_start=564,
+  serialized_end=649,
 )
 
 
@@ -332,6 +346,7 @@ _REFRESHRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='refreshed', full_name='syncano.hosting.acme.v1.RefreshResponse.refreshed', index=0,
@@ -339,14 +354,14 @@ _REFRESHRESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='failed', full_name='syncano.hosting.acme.v1.RefreshResponse.failed', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -359,8 +374,8 @@ _REFRESHRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=630,
-  serialized_end=744,
+  serialized_start=652,
+  serialized_end=780,
 )
 
 
@@ -370,6 +385,7 @@ _LISTREQUEST = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='domains', full_name='syncano.hosting.acme.v1.ListRequest.domains', index=0,
@@ -377,14 +393,14 @@ _LISTREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='expiration_lte', full_name='syncano.hosting.acme.v1.ListRequest.expiration_lte', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -397,8 +413,8 @@ _LISTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=746,
-  serialized_end=828,
+  serialized_start=782,
+  serialized_end=864,
 )
 
 
@@ -408,14 +424,15 @@ _LISTRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='hosts', full_name='syncano.hosting.acme.v1.ListResponse.hosts', index=0,
+      name='certificates', full_name='syncano.hosting.acme.v1.ListResponse.certificates', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -428,22 +445,22 @@ _LISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=830,
-  serialized_end=890,
+  serialized_start=866,
+  serialized_end=940,
 )
 
-_HOST.fields_by_name['status'].enum_type = _STATUS
-_HOST.fields_by_name['expiration'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
-_HOST.fields_by_name['refresh'].message_type = _REFRESH
+_CERTIFICATE.fields_by_name['status'].enum_type = _STATUS
+_CERTIFICATE.fields_by_name['expiration'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_CERTIFICATE.fields_by_name['refresh'].message_type = _REFRESH
 _CREATEREQUEST.fields_by_name['refresh'].message_type = _REFRESH
-_CREATERESPONSE.fields_by_name['host'].message_type = _HOST
+_CREATERESPONSE.fields_by_name['certificate'].message_type = _CERTIFICATE
 _REFRESHREQUEST.fields_by_name['expiration_lte'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
-_REFRESHRESPONSE.fields_by_name['refreshed'].message_type = _HOST
-_REFRESHRESPONSE.fields_by_name['failed'].message_type = _HOST
+_REFRESHRESPONSE.fields_by_name['refreshed'].message_type = _CERTIFICATE
+_REFRESHRESPONSE.fields_by_name['failed'].message_type = _CERTIFICATE
 _LISTREQUEST.fields_by_name['expiration_lte'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
-_LISTRESPONSE.fields_by_name['hosts'].message_type = _HOST
+_LISTRESPONSE.fields_by_name['certificates'].message_type = _CERTIFICATE
 DESCRIPTOR.message_types_by_name['Refresh'] = _REFRESH
-DESCRIPTOR.message_types_by_name['Host'] = _HOST
+DESCRIPTOR.message_types_by_name['Certificate'] = _CERTIFICATE
 DESCRIPTOR.message_types_by_name['CreateRequest'] = _CREATEREQUEST
 DESCRIPTOR.message_types_by_name['CreateResponse'] = _CREATERESPONSE
 DESCRIPTOR.message_types_by_name['DeleteRequest'] = _DELETEREQUEST
@@ -462,12 +479,12 @@ Refresh = _reflection.GeneratedProtocolMessageType('Refresh', (_message.Message,
   })
 _sym_db.RegisterMessage(Refresh)
 
-Host = _reflection.GeneratedProtocolMessageType('Host', (_message.Message,), {
-  'DESCRIPTOR' : _HOST,
+Certificate = _reflection.GeneratedProtocolMessageType('Certificate', (_message.Message,), {
+  'DESCRIPTOR' : _CERTIFICATE,
   '__module__' : 'syncano.hosting.acme.v1.acme_pb2'
-  # @@protoc_insertion_point(class_scope:syncano.hosting.acme.v1.Host)
+  # @@protoc_insertion_point(class_scope:syncano.hosting.acme.v1.Certificate)
   })
-_sym_db.RegisterMessage(Host)
+_sym_db.RegisterMessage(Certificate)
 
 CreateRequest = _reflection.GeneratedProtocolMessageType('CreateRequest', (_message.Message,), {
   'DESCRIPTOR' : _CREATEREQUEST,
@@ -528,54 +545,59 @@ _sym_db.RegisterMessage(ListResponse)
 
 DESCRIPTOR._options = None
 
-_ACMEHOST = _descriptor.ServiceDescriptor(
-  name='AcmeHost',
-  full_name='syncano.hosting.acme.v1.AcmeHost',
+_ACMEPROXY = _descriptor.ServiceDescriptor(
+  name='AcmeProxy',
+  full_name='syncano.hosting.acme.v1.AcmeProxy',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=980,
-  serialized_end=1351,
+  create_key=_descriptor._internal_create_key,
+  serialized_start=1042,
+  serialized_end=1414,
   methods=[
   _descriptor.MethodDescriptor(
     name='Create',
-    full_name='syncano.hosting.acme.v1.AcmeHost.Create',
+    full_name='syncano.hosting.acme.v1.AcmeProxy.Create',
     index=0,
     containing_service=None,
     input_type=_CREATEREQUEST,
     output_type=_CREATERESPONSE,
     serialized_options=None,
+    create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='Delete',
-    full_name='syncano.hosting.acme.v1.AcmeHost.Delete',
+    full_name='syncano.hosting.acme.v1.AcmeProxy.Delete',
     index=1,
     containing_service=None,
     input_type=_DELETEREQUEST,
     output_type=_DELETERESPONSE,
     serialized_options=None,
+    create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='Refresh',
-    full_name='syncano.hosting.acme.v1.AcmeHost.Refresh',
+    full_name='syncano.hosting.acme.v1.AcmeProxy.Refresh',
     index=2,
     containing_service=None,
     input_type=_REFRESHREQUEST,
     output_type=_REFRESHRESPONSE,
     serialized_options=None,
+    create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='List',
-    full_name='syncano.hosting.acme.v1.AcmeHost.List',
+    full_name='syncano.hosting.acme.v1.AcmeProxy.List',
     index=3,
     containing_service=None,
     input_type=_LISTREQUEST,
     output_type=_LISTRESPONSE,
     serialized_options=None,
+    create_key=_descriptor._internal_create_key,
   ),
 ])
-_sym_db.RegisterServiceDescriptor(_ACMEHOST)
+_sym_db.RegisterServiceDescriptor(_ACMEPROXY)
 
-DESCRIPTOR.services_by_name['AcmeHost'] = _ACMEHOST
+DESCRIPTOR.services_by_name['AcmeProxy'] = _ACMEPROXY
 
 # @@protoc_insertion_point(module_scope)

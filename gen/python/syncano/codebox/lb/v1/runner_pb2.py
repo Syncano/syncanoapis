@@ -19,6 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='syncano.codebox.lb.v1',
   syntax='proto3',
   serialized_options=b'Z>github.com/Syncano/syncanoapis/gen/go/syncano/codebox/lb/v1;lb',
+  create_key=_descriptor._internal_create_key,
   serialized_pb=b'\n\"syncano/codebox/lb/v1/runner.proto\x12\x15syncano.codebox.lb.v1\x1a&syncano/codebox/script/v1/script.proto\"=\n\x07RunMeta\x12\x17\n\x0f\x63oncurrency_key\x18\x01 \x01(\t\x12\x19\n\x11\x63oncurrency_limit\x18\x02 \x01(\x05\"\xbd\x01\n\nRunRequest\x12.\n\x04meta\x18\x01 \x01(\x0b\x32\x1e.syncano.codebox.lb.v1.RunMetaH\x00\x12\x39\n\x0bscript_meta\x18\x02 \x01(\x0b\x32\".syncano.codebox.script.v1.RunMetaH\x00\x12;\n\x0cscript_chunk\x18\x03 \x01(\x0b\x32#.syncano.codebox.script.v1.RunChunkH\x00\x42\x07\n\x05value2\xc3\x01\n\x0cScriptRunner\x12T\n\x03Run\x12!.syncano.codebox.lb.v1.RunRequest\x1a&.syncano.codebox.script.v1.RunResponse(\x01\x30\x01\x12]\n\x06\x44\x65lete\x12(.syncano.codebox.script.v1.DeleteRequest\x1a).syncano.codebox.script.v1.DeleteResponseB@Z>github.com/Syncano/syncanoapis/gen/go/syncano/codebox/lb/v1;lbb\x06proto3'
   ,
   dependencies=[syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2.DESCRIPTOR,])
@@ -32,6 +33,7 @@ _RUNMETA = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='concurrency_key', full_name='syncano.codebox.lb.v1.RunMeta.concurrency_key', index=0,
@@ -39,14 +41,14 @@ _RUNMETA = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='concurrency_limit', full_name='syncano.codebox.lb.v1.RunMeta.concurrency_limit', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -70,6 +72,7 @@ _RUNREQUEST = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='meta', full_name='syncano.codebox.lb.v1.RunRequest.meta', index=0,
@@ -77,21 +80,21 @@ _RUNREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='script_meta', full_name='syncano.codebox.lb.v1.RunRequest.script_meta', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='script_chunk', full_name='syncano.codebox.lb.v1.RunRequest.script_chunk', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -105,7 +108,9 @@ _RUNREQUEST = _descriptor.Descriptor(
   oneofs=[
     _descriptor.OneofDescriptor(
       name='value', full_name='syncano.codebox.lb.v1.RunRequest.value',
-      index=0, containing_type=None, fields=[]),
+      index=0, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[]),
   ],
   serialized_start=165,
   serialized_end=354,
@@ -150,6 +155,7 @@ _SCRIPTRUNNER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
+  create_key=_descriptor._internal_create_key,
   serialized_start=357,
   serialized_end=552,
   methods=[
@@ -161,6 +167,7 @@ _SCRIPTRUNNER = _descriptor.ServiceDescriptor(
     input_type=_RUNREQUEST,
     output_type=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2._RUNRESPONSE,
     serialized_options=None,
+    create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='Delete',
@@ -170,6 +177,7 @@ _SCRIPTRUNNER = _descriptor.ServiceDescriptor(
     input_type=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2._DELETEREQUEST,
     output_type=syncano_dot_codebox_dot_script_dot_v1_dot_script__pb2._DELETERESPONSE,
     serialized_options=None,
+    create_key=_descriptor._internal_create_key,
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_SCRIPTRUNNER)

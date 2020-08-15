@@ -4,7 +4,7 @@ option go_package = "github.com/Syncano/syncanoapis/gen/go/syncano/hosting/acme/
 
 import "google/protobuf/timestamp.proto";
 
-service AcmeHost {
+service AcmeProxy {
   rpc Create (CreateRequest) returns (CreateResponse);
   rpc Delete (DeleteRequest) returns (DeleteResponse);
   rpc Refresh (RefreshRequest) returns (RefreshResponse);
@@ -15,8 +15,8 @@ enum Status {
   UNKNOWN = 0;
   OK = 1;
   INVALID_DOMAIN = 2;
-  CNAME_NOT_SET = 3;
-  WRONG_CNAME = 4;
+  DOMAIN_VERIFICATION_FAILED = 3;
+  ACME_ERROR = 4;
 }
 
 message Refresh {
@@ -24,7 +24,7 @@ message Refresh {
   uint32 refresh_before_days = 2;
 }
 
-message Host {
+message Certificate {
   string domain = 1;
   Status status = 2;
   google.protobuf.Timestamp expiration = 3;
@@ -32,6 +32,7 @@ message Host {
   Refresh refresh = 4;
 }
 
+// Create
 message CreateRequest {
   string domain = 1;
   Refresh refresh = 2;
@@ -39,9 +40,10 @@ message CreateRequest {
 }
 
 message CreateResponse {
-  Host host = 1;
+  Certificate certificate = 1;
 }
 
+// Delete
 message DeleteRequest {
    string domain = 1;
 }
@@ -49,21 +51,23 @@ message DeleteRequest {
 message DeleteResponse {
 }
 
+// Refresh
 message RefreshRequest {
   repeated string domains = 1; // optional
   google.protobuf.Timestamp expiration_lte = 2; // optional
 }
 
 message RefreshResponse {
-  repeated Host refreshed = 1;
-  repeated Host failed = 2;
+  repeated Certificate refreshed = 1;
+  repeated Certificate failed = 2;
 }
 
+// List
 message ListRequest {
   repeated string domains = 1; // optional
   google.protobuf.Timestamp expiration_lte = 2; // optional
 }
 
 message ListResponse {
-  repeated Host hosts = 1;
+  repeated Certificate certificates = 1;
 }

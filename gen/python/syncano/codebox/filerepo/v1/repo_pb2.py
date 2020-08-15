@@ -18,6 +18,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='syncano.codebox.filerepo.v1',
   syntax='proto3',
   serialized_options=b'ZJgithub.com/Syncano/syncanoapis/gen/go/syncano/codebox/filerepo/v1;filerepo',
+  create_key=_descriptor._internal_create_key,
   serialized_pb=b'\n&syncano/codebox/filerepo/v1/repo.proto\x12\x1bsyncano.codebox.filerepo.v1\"\x1c\n\rExistsRequest\x12\x0b\n\x03key\x18\x01 \x01(\t\"\x1c\n\x0e\x45xistsResponse\x12\n\n\x02ok\x18\x01 \x01(\x08\" \n\x11UploadMetaMessage\x12\x0b\n\x03key\x18\x01 \x01(\t\"0\n\x12UploadChunkMessage\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\"\xaa\x01\n\rUploadRequest\x12>\n\x04meta\x18\x01 \x01(\x0b\x32..syncano.codebox.filerepo.v1.UploadMetaMessageH\x00\x12@\n\x05\x63hunk\x18\x02 \x01(\x0b\x32/.syncano.codebox.filerepo.v1.UploadChunkMessageH\x00\x12\x0e\n\x04\x64one\x18\x03 \x01(\x08H\x00\x42\x07\n\x05value\"\"\n\x0eUploadResponse\x12\x10\n\x08\x61\x63\x63\x65pted\x18\x01 \x01(\x08\x32\xd0\x01\n\x04Repo\x12\x61\n\x06\x45xists\x12*.syncano.codebox.filerepo.v1.ExistsRequest\x1a+.syncano.codebox.filerepo.v1.ExistsResponse\x12\x65\n\x06Upload\x12*.syncano.codebox.filerepo.v1.UploadRequest\x1a+.syncano.codebox.filerepo.v1.UploadResponse(\x01\x30\x01\x42LZJgithub.com/Syncano/syncanoapis/gen/go/syncano/codebox/filerepo/v1;filerepob\x06proto3'
 )
 
@@ -30,6 +31,7 @@ _EXISTSREQUEST = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='key', full_name='syncano.codebox.filerepo.v1.ExistsRequest.key', index=0,
@@ -37,7 +39,7 @@ _EXISTSREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -61,6 +63,7 @@ _EXISTSRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='ok', full_name='syncano.codebox.filerepo.v1.ExistsResponse.ok', index=0,
@@ -68,7 +71,7 @@ _EXISTSRESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -92,6 +95,7 @@ _UPLOADMETAMESSAGE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='key', full_name='syncano.codebox.filerepo.v1.UploadMetaMessage.key', index=0,
@@ -99,7 +103,7 @@ _UPLOADMETAMESSAGE = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -123,6 +127,7 @@ _UPLOADCHUNKMESSAGE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='name', full_name='syncano.codebox.filerepo.v1.UploadChunkMessage.name', index=0,
@@ -130,14 +135,14 @@ _UPLOADCHUNKMESSAGE = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='data', full_name='syncano.codebox.filerepo.v1.UploadChunkMessage.data', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -161,6 +166,7 @@ _UPLOADREQUEST = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='meta', full_name='syncano.codebox.filerepo.v1.UploadRequest.meta', index=0,
@@ -168,21 +174,21 @@ _UPLOADREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='chunk', full_name='syncano.codebox.filerepo.v1.UploadRequest.chunk', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='done', full_name='syncano.codebox.filerepo.v1.UploadRequest.done', index=2,
       number=3, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -196,7 +202,9 @@ _UPLOADREQUEST = _descriptor.Descriptor(
   oneofs=[
     _descriptor.OneofDescriptor(
       name='value', full_name='syncano.codebox.filerepo.v1.UploadRequest.value',
-      index=0, containing_type=None, fields=[]),
+      index=0, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[]),
   ],
   serialized_start=216,
   serialized_end=386,
@@ -209,6 +217,7 @@ _UPLOADRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='accepted', full_name='syncano.codebox.filerepo.v1.UploadResponse.accepted', index=0,
@@ -216,7 +225,7 @@ _UPLOADRESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -303,6 +312,7 @@ _REPO = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
+  create_key=_descriptor._internal_create_key,
   serialized_start=425,
   serialized_end=633,
   methods=[
@@ -314,6 +324,7 @@ _REPO = _descriptor.ServiceDescriptor(
     input_type=_EXISTSREQUEST,
     output_type=_EXISTSRESPONSE,
     serialized_options=None,
+    create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='Upload',
@@ -323,6 +334,7 @@ _REPO = _descriptor.ServiceDescriptor(
     input_type=_UPLOADREQUEST,
     output_type=_UPLOADRESPONSE,
     serialized_options=None,
+    create_key=_descriptor._internal_create_key,
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_REPO)
