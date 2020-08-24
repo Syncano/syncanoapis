@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'ZBgithub.com/Syncano/syncanoapis/gen/go/syncano/hosting/acme/v1;acme',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\"syncano/hosting/acme/v1/acme.proto\x12\x17syncano.hosting.acme.v1\x1a\x1fgoogle/protobuf/timestamp.proto\"<\n\x07Refresh\x12\x14\n\x0c\x61uto_refresh\x18\x01 \x01(\x08\x12\x1b\n\x13refresh_before_days\x18\x02 \x01(\r\"\xb1\x01\n\x0b\x43\x65rtificate\x12\x0e\n\x06\x64omain\x18\x01 \x01(\t\x12/\n\x06status\x18\x02 \x01(\x0e\x32\x1f.syncano.hosting.acme.v1.Status\x12.\n\nexpiration\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x31\n\x07refresh\x18\x04 \x01(\x0b\x32 .syncano.hosting.acme.v1.Refresh\"`\n\rCreateRequest\x12\x0e\n\x06\x64omain\x18\x01 \x01(\t\x12\x31\n\x07refresh\x18\x02 \x01(\x0b\x32 .syncano.hosting.acme.v1.Refresh\x12\x0c\n\x04wait\x18\x03 \x01(\x08\"K\n\x0e\x43reateResponse\x12\x39\n\x0b\x63\x65rtificate\x18\x01 \x01(\x0b\x32$.syncano.hosting.acme.v1.Certificate\"\x1f\n\rDeleteRequest\x12\x0e\n\x06\x64omain\x18\x01 \x01(\t\"\x10\n\x0e\x44\x65leteResponse\"U\n\x0eRefreshRequest\x12\x0f\n\x07\x64omains\x18\x01 \x03(\t\x12\x32\n\x0e\x65xpiration_lte\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"\x80\x01\n\x0fRefreshResponse\x12\x37\n\trefreshed\x18\x01 \x03(\x0b\x32$.syncano.hosting.acme.v1.Certificate\x12\x34\n\x06\x66\x61iled\x18\x02 \x03(\x0b\x32$.syncano.hosting.acme.v1.Certificate\"R\n\x0bListRequest\x12\x0f\n\x07\x64omains\x18\x01 \x03(\t\x12\x32\n\x0e\x65xpiration_lte\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"J\n\x0cListResponse\x12:\n\x0c\x63\x65rtificates\x18\x01 \x03(\x0b\x32$.syncano.hosting.acme.v1.Certificate*a\n\x06Status\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x06\n\x02OK\x10\x01\x12\x12\n\x0eINVALID_DOMAIN\x10\x02\x12\x1e\n\x1a\x44OMAIN_VERIFICATION_FAILED\x10\x03\x12\x0e\n\nACME_ERROR\x10\x04\x32\xf4\x02\n\tAcmeProxy\x12Y\n\x06\x43reate\x12&.syncano.hosting.acme.v1.CreateRequest\x1a\'.syncano.hosting.acme.v1.CreateResponse\x12Y\n\x06\x44\x65lete\x12&.syncano.hosting.acme.v1.DeleteRequest\x1a\'.syncano.hosting.acme.v1.DeleteResponse\x12\\\n\x07Refresh\x12\'.syncano.hosting.acme.v1.RefreshRequest\x1a(.syncano.hosting.acme.v1.RefreshResponse\x12S\n\x04List\x12$.syncano.hosting.acme.v1.ListRequest\x1a%.syncano.hosting.acme.v1.ListResponseBDZBgithub.com/Syncano/syncanoapis/gen/go/syncano/hosting/acme/v1;acmeb\x06proto3'
+  serialized_pb=b'\n\"syncano/hosting/acme/v1/acme.proto\x12\x17syncano.hosting.acme.v1\x1a\x1fgoogle/protobuf/timestamp.proto\"<\n\x07Refresh\x12\x14\n\x0c\x61uto_refresh\x18\x01 \x01(\x08\x12\x1b\n\x13refresh_before_days\x18\x02 \x01(\r\"\xb1\x01\n\x0b\x43\x65rtificate\x12\x0e\n\x06\x64omain\x18\x01 \x01(\t\x12/\n\x06status\x18\x02 \x01(\x0e\x32\x1f.syncano.hosting.acme.v1.Status\x12.\n\nexpiration\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x31\n\x07refresh\x18\x04 \x01(\x0b\x32 .syncano.hosting.acme.v1.Refresh\"`\n\rCreateRequest\x12\x0e\n\x06\x64omain\x18\x01 \x01(\t\x12\x31\n\x07refresh\x18\x02 \x01(\x0b\x32 .syncano.hosting.acme.v1.Refresh\x12\x0c\n\x04wait\x18\x03 \x01(\x08\"K\n\x0e\x43reateResponse\x12\x39\n\x0b\x63\x65rtificate\x18\x01 \x01(\x0b\x32$.syncano.hosting.acme.v1.Certificate\"\x1c\n\nGetRequest\x12\x0e\n\x06\x64omain\x18\x01 \x01(\t\"H\n\x0bGetResponse\x12\x39\n\x0b\x63\x65rtificate\x18\x01 \x01(\x0b\x32$.syncano.hosting.acme.v1.Certificate\"\x83\x01\n\x0bListRequest\x12\x0f\n\x07\x64omains\x18\x01 \x03(\t\x12\x32\n\x0e\x65xpiration_lte\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12/\n\x06status\x18\x03 \x01(\x0e\x32\x1f.syncano.hosting.acme.v1.Status\"J\n\x0cListResponse\x12:\n\x0c\x63\x65rtificates\x18\x01 \x03(\x0b\x32$.syncano.hosting.acme.v1.Certificate\"\x86\x01\n\x0eRefreshRequest\x12\x0f\n\x07\x64omains\x18\x01 \x03(\t\x12\x32\n\x0e\x65xpiration_lte\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12/\n\x06status\x18\x03 \x01(\x0e\x32\x1f.syncano.hosting.acme.v1.Status\"\x80\x01\n\x0fRefreshResponse\x12\x37\n\trefreshed\x18\x01 \x03(\x0b\x32$.syncano.hosting.acme.v1.Certificate\x12\x34\n\x06\x66\x61iled\x18\x02 \x03(\x0b\x32$.syncano.hosting.acme.v1.Certificate\"\x1f\n\rDeleteRequest\x12\x0e\n\x06\x64omain\x18\x01 \x01(\t\"\x10\n\x0e\x44\x65leteResponse*a\n\x06Status\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x06\n\x02OK\x10\x01\x12\x12\n\x0eINVALID_DOMAIN\x10\x02\x12\x1e\n\x1a\x44OMAIN_VERIFICATION_FAILED\x10\x03\x12\x0e\n\nACME_ERROR\x10\x04\x32\xc6\x03\n\tAcmeProxy\x12Y\n\x06\x43reate\x12&.syncano.hosting.acme.v1.CreateRequest\x1a\'.syncano.hosting.acme.v1.CreateResponse\x12P\n\x03Get\x12#.syncano.hosting.acme.v1.GetRequest\x1a$.syncano.hosting.acme.v1.GetResponse\x12S\n\x04List\x12$.syncano.hosting.acme.v1.ListRequest\x1a%.syncano.hosting.acme.v1.ListResponse\x12\\\n\x07Refresh\x12\'.syncano.hosting.acme.v1.RefreshRequest\x1a(.syncano.hosting.acme.v1.RefreshResponse\x12Y\n\x06\x44\x65lete\x12&.syncano.hosting.acme.v1.DeleteRequest\x1a\'.syncano.hosting.acme.v1.DeleteResponseBDZBgithub.com/Syncano/syncanoapis/gen/go/syncano/hosting/acme/v1;acmeb\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -60,8 +60,8 @@ _STATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=942,
-  serialized_end=1039,
+  serialized_start=1146,
+  serialized_end=1243,
 )
 _sym_db.RegisterEnumDescriptor(_STATUS)
 
@@ -244,16 +244,16 @@ _CREATERESPONSE = _descriptor.Descriptor(
 )
 
 
-_DELETEREQUEST = _descriptor.Descriptor(
-  name='DeleteRequest',
-  full_name='syncano.hosting.acme.v1.DeleteRequest',
+_GETREQUEST = _descriptor.Descriptor(
+  name='GetRequest',
+  full_name='syncano.hosting.acme.v1.GetRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='domain', full_name='syncano.hosting.acme.v1.DeleteRequest.domain', index=0,
+      name='domain', full_name='syncano.hosting.acme.v1.GetRequest.domain', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -272,18 +272,25 @@ _DELETEREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=513,
-  serialized_end=544,
+  serialized_end=541,
 )
 
 
-_DELETERESPONSE = _descriptor.Descriptor(
-  name='DeleteResponse',
-  full_name='syncano.hosting.acme.v1.DeleteResponse',
+_GETRESPONSE = _descriptor.Descriptor(
+  name='GetResponse',
+  full_name='syncano.hosting.acme.v1.GetResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='certificate', full_name='syncano.hosting.acme.v1.GetResponse.certificate', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -296,8 +303,86 @@ _DELETERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=546,
-  serialized_end=562,
+  serialized_start=543,
+  serialized_end=615,
+)
+
+
+_LISTREQUEST = _descriptor.Descriptor(
+  name='ListRequest',
+  full_name='syncano.hosting.acme.v1.ListRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='domains', full_name='syncano.hosting.acme.v1.ListRequest.domains', index=0,
+      number=1, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='expiration_lte', full_name='syncano.hosting.acme.v1.ListRequest.expiration_lte', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='status', full_name='syncano.hosting.acme.v1.ListRequest.status', index=2,
+      number=3, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=618,
+  serialized_end=749,
+)
+
+
+_LISTRESPONSE = _descriptor.Descriptor(
+  name='ListResponse',
+  full_name='syncano.hosting.acme.v1.ListResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='certificates', full_name='syncano.hosting.acme.v1.ListResponse.certificates', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=751,
+  serialized_end=825,
 )
 
 
@@ -323,6 +408,13 @@ _REFRESHREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='status', full_name='syncano.hosting.acme.v1.RefreshRequest.status', index=2,
+      number=3, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -335,8 +427,8 @@ _REFRESHREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=564,
-  serialized_end=649,
+  serialized_start=828,
+  serialized_end=962,
 )
 
 
@@ -374,30 +466,23 @@ _REFRESHRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=652,
-  serialized_end=780,
+  serialized_start=965,
+  serialized_end=1093,
 )
 
 
-_LISTREQUEST = _descriptor.Descriptor(
-  name='ListRequest',
-  full_name='syncano.hosting.acme.v1.ListRequest',
+_DELETEREQUEST = _descriptor.Descriptor(
+  name='DeleteRequest',
+  full_name='syncano.hosting.acme.v1.DeleteRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='domains', full_name='syncano.hosting.acme.v1.ListRequest.domains', index=0,
-      number=1, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='expiration_lte', full_name='syncano.hosting.acme.v1.ListRequest.expiration_lte', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='domain', full_name='syncano.hosting.acme.v1.DeleteRequest.domain', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -413,26 +498,19 @@ _LISTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=782,
-  serialized_end=864,
+  serialized_start=1095,
+  serialized_end=1126,
 )
 
 
-_LISTRESPONSE = _descriptor.Descriptor(
-  name='ListResponse',
-  full_name='syncano.hosting.acme.v1.ListResponse',
+_DELETERESPONSE = _descriptor.Descriptor(
+  name='DeleteResponse',
+  full_name='syncano.hosting.acme.v1.DeleteResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
-    _descriptor.FieldDescriptor(
-      name='certificates', full_name='syncano.hosting.acme.v1.ListResponse.certificates', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -445,8 +523,8 @@ _LISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=866,
-  serialized_end=940,
+  serialized_start=1128,
+  serialized_end=1144,
 )
 
 _CERTIFICATE.fields_by_name['status'].enum_type = _STATUS
@@ -454,21 +532,26 @@ _CERTIFICATE.fields_by_name['expiration'].message_type = google_dot_protobuf_dot
 _CERTIFICATE.fields_by_name['refresh'].message_type = _REFRESH
 _CREATEREQUEST.fields_by_name['refresh'].message_type = _REFRESH
 _CREATERESPONSE.fields_by_name['certificate'].message_type = _CERTIFICATE
+_GETRESPONSE.fields_by_name['certificate'].message_type = _CERTIFICATE
+_LISTREQUEST.fields_by_name['expiration_lte'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_LISTREQUEST.fields_by_name['status'].enum_type = _STATUS
+_LISTRESPONSE.fields_by_name['certificates'].message_type = _CERTIFICATE
 _REFRESHREQUEST.fields_by_name['expiration_lte'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_REFRESHREQUEST.fields_by_name['status'].enum_type = _STATUS
 _REFRESHRESPONSE.fields_by_name['refreshed'].message_type = _CERTIFICATE
 _REFRESHRESPONSE.fields_by_name['failed'].message_type = _CERTIFICATE
-_LISTREQUEST.fields_by_name['expiration_lte'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
-_LISTRESPONSE.fields_by_name['certificates'].message_type = _CERTIFICATE
 DESCRIPTOR.message_types_by_name['Refresh'] = _REFRESH
 DESCRIPTOR.message_types_by_name['Certificate'] = _CERTIFICATE
 DESCRIPTOR.message_types_by_name['CreateRequest'] = _CREATEREQUEST
 DESCRIPTOR.message_types_by_name['CreateResponse'] = _CREATERESPONSE
-DESCRIPTOR.message_types_by_name['DeleteRequest'] = _DELETEREQUEST
-DESCRIPTOR.message_types_by_name['DeleteResponse'] = _DELETERESPONSE
-DESCRIPTOR.message_types_by_name['RefreshRequest'] = _REFRESHREQUEST
-DESCRIPTOR.message_types_by_name['RefreshResponse'] = _REFRESHRESPONSE
+DESCRIPTOR.message_types_by_name['GetRequest'] = _GETREQUEST
+DESCRIPTOR.message_types_by_name['GetResponse'] = _GETRESPONSE
 DESCRIPTOR.message_types_by_name['ListRequest'] = _LISTREQUEST
 DESCRIPTOR.message_types_by_name['ListResponse'] = _LISTRESPONSE
+DESCRIPTOR.message_types_by_name['RefreshRequest'] = _REFRESHREQUEST
+DESCRIPTOR.message_types_by_name['RefreshResponse'] = _REFRESHRESPONSE
+DESCRIPTOR.message_types_by_name['DeleteRequest'] = _DELETEREQUEST
+DESCRIPTOR.message_types_by_name['DeleteResponse'] = _DELETERESPONSE
 DESCRIPTOR.enum_types_by_name['Status'] = _STATUS
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -500,33 +583,19 @@ CreateResponse = _reflection.GeneratedProtocolMessageType('CreateResponse', (_me
   })
 _sym_db.RegisterMessage(CreateResponse)
 
-DeleteRequest = _reflection.GeneratedProtocolMessageType('DeleteRequest', (_message.Message,), {
-  'DESCRIPTOR' : _DELETEREQUEST,
+GetRequest = _reflection.GeneratedProtocolMessageType('GetRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETREQUEST,
   '__module__' : 'syncano.hosting.acme.v1.acme_pb2'
-  # @@protoc_insertion_point(class_scope:syncano.hosting.acme.v1.DeleteRequest)
+  # @@protoc_insertion_point(class_scope:syncano.hosting.acme.v1.GetRequest)
   })
-_sym_db.RegisterMessage(DeleteRequest)
+_sym_db.RegisterMessage(GetRequest)
 
-DeleteResponse = _reflection.GeneratedProtocolMessageType('DeleteResponse', (_message.Message,), {
-  'DESCRIPTOR' : _DELETERESPONSE,
+GetResponse = _reflection.GeneratedProtocolMessageType('GetResponse', (_message.Message,), {
+  'DESCRIPTOR' : _GETRESPONSE,
   '__module__' : 'syncano.hosting.acme.v1.acme_pb2'
-  # @@protoc_insertion_point(class_scope:syncano.hosting.acme.v1.DeleteResponse)
+  # @@protoc_insertion_point(class_scope:syncano.hosting.acme.v1.GetResponse)
   })
-_sym_db.RegisterMessage(DeleteResponse)
-
-RefreshRequest = _reflection.GeneratedProtocolMessageType('RefreshRequest', (_message.Message,), {
-  'DESCRIPTOR' : _REFRESHREQUEST,
-  '__module__' : 'syncano.hosting.acme.v1.acme_pb2'
-  # @@protoc_insertion_point(class_scope:syncano.hosting.acme.v1.RefreshRequest)
-  })
-_sym_db.RegisterMessage(RefreshRequest)
-
-RefreshResponse = _reflection.GeneratedProtocolMessageType('RefreshResponse', (_message.Message,), {
-  'DESCRIPTOR' : _REFRESHRESPONSE,
-  '__module__' : 'syncano.hosting.acme.v1.acme_pb2'
-  # @@protoc_insertion_point(class_scope:syncano.hosting.acme.v1.RefreshResponse)
-  })
-_sym_db.RegisterMessage(RefreshResponse)
+_sym_db.RegisterMessage(GetResponse)
 
 ListRequest = _reflection.GeneratedProtocolMessageType('ListRequest', (_message.Message,), {
   'DESCRIPTOR' : _LISTREQUEST,
@@ -542,6 +611,34 @@ ListResponse = _reflection.GeneratedProtocolMessageType('ListResponse', (_messag
   })
 _sym_db.RegisterMessage(ListResponse)
 
+RefreshRequest = _reflection.GeneratedProtocolMessageType('RefreshRequest', (_message.Message,), {
+  'DESCRIPTOR' : _REFRESHREQUEST,
+  '__module__' : 'syncano.hosting.acme.v1.acme_pb2'
+  # @@protoc_insertion_point(class_scope:syncano.hosting.acme.v1.RefreshRequest)
+  })
+_sym_db.RegisterMessage(RefreshRequest)
+
+RefreshResponse = _reflection.GeneratedProtocolMessageType('RefreshResponse', (_message.Message,), {
+  'DESCRIPTOR' : _REFRESHRESPONSE,
+  '__module__' : 'syncano.hosting.acme.v1.acme_pb2'
+  # @@protoc_insertion_point(class_scope:syncano.hosting.acme.v1.RefreshResponse)
+  })
+_sym_db.RegisterMessage(RefreshResponse)
+
+DeleteRequest = _reflection.GeneratedProtocolMessageType('DeleteRequest', (_message.Message,), {
+  'DESCRIPTOR' : _DELETEREQUEST,
+  '__module__' : 'syncano.hosting.acme.v1.acme_pb2'
+  # @@protoc_insertion_point(class_scope:syncano.hosting.acme.v1.DeleteRequest)
+  })
+_sym_db.RegisterMessage(DeleteRequest)
+
+DeleteResponse = _reflection.GeneratedProtocolMessageType('DeleteResponse', (_message.Message,), {
+  'DESCRIPTOR' : _DELETERESPONSE,
+  '__module__' : 'syncano.hosting.acme.v1.acme_pb2'
+  # @@protoc_insertion_point(class_scope:syncano.hosting.acme.v1.DeleteResponse)
+  })
+_sym_db.RegisterMessage(DeleteResponse)
+
 
 DESCRIPTOR._options = None
 
@@ -552,8 +649,8 @@ _ACMEPROXY = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=1042,
-  serialized_end=1414,
+  serialized_start=1246,
+  serialized_end=1700,
   methods=[
   _descriptor.MethodDescriptor(
     name='Create',
@@ -566,19 +663,29 @@ _ACMEPROXY = _descriptor.ServiceDescriptor(
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
-    name='Delete',
-    full_name='syncano.hosting.acme.v1.AcmeProxy.Delete',
+    name='Get',
+    full_name='syncano.hosting.acme.v1.AcmeProxy.Get',
     index=1,
     containing_service=None,
-    input_type=_DELETEREQUEST,
-    output_type=_DELETERESPONSE,
+    input_type=_GETREQUEST,
+    output_type=_GETRESPONSE,
+    serialized_options=None,
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='List',
+    full_name='syncano.hosting.acme.v1.AcmeProxy.List',
+    index=2,
+    containing_service=None,
+    input_type=_LISTREQUEST,
+    output_type=_LISTRESPONSE,
     serialized_options=None,
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='Refresh',
     full_name='syncano.hosting.acme.v1.AcmeProxy.Refresh',
-    index=2,
+    index=3,
     containing_service=None,
     input_type=_REFRESHREQUEST,
     output_type=_REFRESHRESPONSE,
@@ -586,12 +693,12 @@ _ACMEPROXY = _descriptor.ServiceDescriptor(
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
-    name='List',
-    full_name='syncano.hosting.acme.v1.AcmeProxy.List',
-    index=3,
+    name='Delete',
+    full_name='syncano.hosting.acme.v1.AcmeProxy.Delete',
+    index=4,
     containing_service=None,
-    input_type=_LISTREQUEST,
-    output_type=_LISTRESPONSE,
+    input_type=_DELETEREQUEST,
+    output_type=_DELETERESPONSE,
     serialized_options=None,
     create_key=_descriptor._internal_create_key,
   ),

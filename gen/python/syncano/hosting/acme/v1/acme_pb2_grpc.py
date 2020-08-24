@@ -19,20 +19,25 @@ class AcmeProxyStub(object):
                 request_serializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.CreateRequest.SerializeToString,
                 response_deserializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.CreateResponse.FromString,
                 )
-        self.Delete = channel.unary_unary(
-                '/syncano.hosting.acme.v1.AcmeProxy/Delete',
-                request_serializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.DeleteRequest.SerializeToString,
-                response_deserializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.DeleteResponse.FromString,
+        self.Get = channel.unary_unary(
+                '/syncano.hosting.acme.v1.AcmeProxy/Get',
+                request_serializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.GetRequest.SerializeToString,
+                response_deserializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.GetResponse.FromString,
+                )
+        self.List = channel.unary_unary(
+                '/syncano.hosting.acme.v1.AcmeProxy/List',
+                request_serializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.ListRequest.SerializeToString,
+                response_deserializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.ListResponse.FromString,
                 )
         self.Refresh = channel.unary_unary(
                 '/syncano.hosting.acme.v1.AcmeProxy/Refresh',
                 request_serializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.RefreshRequest.SerializeToString,
                 response_deserializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.RefreshResponse.FromString,
                 )
-        self.List = channel.unary_unary(
-                '/syncano.hosting.acme.v1.AcmeProxy/List',
-                request_serializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.ListRequest.SerializeToString,
-                response_deserializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.ListResponse.FromString,
+        self.Delete = channel.unary_unary(
+                '/syncano.hosting.acme.v1.AcmeProxy/Delete',
+                request_serializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.DeleteRequest.SerializeToString,
+                response_deserializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.DeleteResponse.FromString,
                 )
 
 
@@ -45,7 +50,13 @@ class AcmeProxyServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def Delete(self, request, context):
+    def Get(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def List(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -57,7 +68,7 @@ class AcmeProxyServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def List(self, request, context):
+    def Delete(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -71,20 +82,25 @@ def add_AcmeProxyServicer_to_server(servicer, server):
                     request_deserializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.CreateRequest.FromString,
                     response_serializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.CreateResponse.SerializeToString,
             ),
-            'Delete': grpc.unary_unary_rpc_method_handler(
-                    servicer.Delete,
-                    request_deserializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.DeleteRequest.FromString,
-                    response_serializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.DeleteResponse.SerializeToString,
+            'Get': grpc.unary_unary_rpc_method_handler(
+                    servicer.Get,
+                    request_deserializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.GetRequest.FromString,
+                    response_serializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.GetResponse.SerializeToString,
+            ),
+            'List': grpc.unary_unary_rpc_method_handler(
+                    servicer.List,
+                    request_deserializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.ListRequest.FromString,
+                    response_serializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.ListResponse.SerializeToString,
             ),
             'Refresh': grpc.unary_unary_rpc_method_handler(
                     servicer.Refresh,
                     request_deserializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.RefreshRequest.FromString,
                     response_serializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.RefreshResponse.SerializeToString,
             ),
-            'List': grpc.unary_unary_rpc_method_handler(
-                    servicer.List,
-                    request_deserializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.ListRequest.FromString,
-                    response_serializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.ListResponse.SerializeToString,
+            'Delete': grpc.unary_unary_rpc_method_handler(
+                    servicer.Delete,
+                    request_deserializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.DeleteRequest.FromString,
+                    response_serializer=syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.DeleteResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -114,7 +130,7 @@ class AcmeProxy(object):
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def Delete(request,
+    def Get(request,
             target,
             options=(),
             channel_credentials=None,
@@ -124,9 +140,26 @@ class AcmeProxy(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/syncano.hosting.acme.v1.AcmeProxy/Delete',
-            syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.DeleteRequest.SerializeToString,
-            syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.DeleteResponse.FromString,
+        return grpc.experimental.unary_unary(request, target, '/syncano.hosting.acme.v1.AcmeProxy/Get',
+            syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.GetRequest.SerializeToString,
+            syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.GetResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def List(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/syncano.hosting.acme.v1.AcmeProxy/List',
+            syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.ListRequest.SerializeToString,
+            syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.ListResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -148,7 +181,7 @@ class AcmeProxy(object):
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def List(request,
+    def Delete(request,
             target,
             options=(),
             channel_credentials=None,
@@ -158,8 +191,8 @@ class AcmeProxy(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/syncano.hosting.acme.v1.AcmeProxy/List',
-            syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.ListRequest.SerializeToString,
-            syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.ListResponse.FromString,
+        return grpc.experimental.unary_unary(request, target, '/syncano.hosting.acme.v1.AcmeProxy/Delete',
+            syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.DeleteRequest.SerializeToString,
+            syncano_dot_hosting_dot_acme_dot_v1_dot_acme__pb2.DeleteResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

@@ -6,9 +6,10 @@ import "google/protobuf/timestamp.proto";
 
 service AcmeProxy {
   rpc Create (CreateRequest) returns (CreateResponse);
-  rpc Delete (DeleteRequest) returns (DeleteResponse);
-  rpc Refresh (RefreshRequest) returns (RefreshResponse);
+  rpc Get (GetRequest) returns (GetResponse);
   rpc List (ListRequest) returns (ListResponse);
+  rpc Refresh (RefreshRequest) returns (RefreshResponse);
+  rpc Delete (DeleteRequest) returns (DeleteResponse);
 }
 
 enum Status {
@@ -43,18 +44,31 @@ message CreateResponse {
   Certificate certificate = 1;
 }
 
-// Delete
-message DeleteRequest {
-   string domain = 1;
+// Get
+message GetRequest {
+  string domain = 1;
 }
 
-message DeleteResponse {
+message GetResponse {
+  Certificate certificate = 1;
+}
+
+// List
+message ListRequest {
+  repeated string domains = 1; // optional
+  google.protobuf.Timestamp expiration_lte = 2; // optional
+  Status status = 3; // optional
+}
+
+message ListResponse {
+  repeated Certificate certificates = 1;
 }
 
 // Refresh
 message RefreshRequest {
   repeated string domains = 1; // optional
   google.protobuf.Timestamp expiration_lte = 2; // optional
+  Status status = 3; // optional
 }
 
 message RefreshResponse {
@@ -62,12 +76,10 @@ message RefreshResponse {
   repeated Certificate failed = 2;
 }
 
-// List
-message ListRequest {
-  repeated string domains = 1; // optional
-  google.protobuf.Timestamp expiration_lte = 2; // optional
+// Delete
+message DeleteRequest {
+  string domain = 1;
 }
 
-message ListResponse {
-  repeated Certificate certificates = 1;
+message DeleteResponse {
 }
